@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -56,3 +57,188 @@
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
 }
+
+
+.tabs.tabs13 {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 48px 32px 40px;
+}
+
+.tabs.tabs13 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 18px;
+  margin-bottom: 40px;
+  background: none;
+  justify-content: flex-start;
+}
+
+.tabs.tabs13 .tabs-tab {
+  background: none;
+  border: none;
+  outline: none;
+  color: #63676b;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 0 16px;
+  margin: 0;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  position: relative;
+}
+
+.tabs.tabs13 .tabs-tab[aria-selected="true"] {
+  color: #181818;
+  border-bottom: 4px solid #76b900;
+}
+
+.tabs.tabs13 .tabs-tab:not([aria-selected="true"]) {
+  border-bottom: 3px solid #e0e0e0;
+}
+
+.tabs.tabs13 .tabs-tab p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #63676b;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.tabs.tabs13 .tabs-panel {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs.tabs13 .tabs-panel div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 56px;
+  min-height: 340px;
+}
+
+.tabs.tabs13 .tabs-panel div img,
+.tabs.tabs13 .tabs-panel div picture {
+  flex: 0 0 290px;
+  width: 290px;
+  height: 290px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin: 0;
+  place-self: center center;
+}
+
+/* Stack text and button vertically, left side */
+.tabs.tabs13 .tabs-panel div h2,
+.tabs.tabs13 .tabs-panel div p,
+.tabs.tabs13 .tabs-panel div .button,
+.tabs.tabs13 .tabs-panel div a.button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tabs.tabs13 .tabs-panel div h2 {
+  color: #181818;
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  max-width: 480px;
+}
+
+.tabs.tabs13 .tabs-panel div p {
+  color: #63676b;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 480px;
+  font-weight: 400;
+}
+
+.tabs.tabs13 .tabs-panel div p:first-of-type {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+
+.tabs.tabs13 .tabs-panel div .button,
+.tabs.tabs13 .tabs-panel div a.button {
+  background: #76b900;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 17px;
+  box-shadow: none;
+  border: none;
+  margin-top: 18px;
+  margin-bottom: 0;
+  margin-left: 0;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.tabs.tabs13 .tabs-panel div .button:hover,
+.tabs.tabs13 .tabs-panel div a.button:hover {
+  background: #5a8e00;
+}
+
+/* If there are multiple images, arrange in 2x2 grid */
+.tabs.tabs13 .tabs-panel div p:has(picture),
+.tabs.tabs13 .tabs-panel div p:has(img) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 14px;
+  margin: 0;
+}
+
+.tabs.tabs13 .tabs-panel div p:has(picture) picture,
+.tabs.tabs13 .tabs-panel div p:has(img) img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs13 {
+    padding: 22px 8px 16px;
+    margin: 24px 0;
+  }
+
+  .tabs.tabs13 .tabs-panel div {
+    flex-direction: column;
+    gap: 24px;
+    min-height: unset;
+  }
+
+  .tabs.tabs13 .tabs-panel div img,
+  .tabs.tabs13 .tabs-panel div picture {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+}
+
+/* Remove border from block if present */
