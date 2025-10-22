@@ -15,8 +15,6 @@ export default function parse(element, { document }) {
   const headingCell = document.createElement('div');
   if (label) headingCell.appendChild(label.cloneNode(true));
   if (mainHeading) headingCell.appendChild(mainHeading.cloneNode(true));
-  // Insert the heading above the table, not as a table row
-  element.insertBefore(headingCell, element.firstChild);
 
   // Find the two column containers
   const columnContainers = Array.from(
@@ -44,5 +42,13 @@ export default function parse(element, { document }) {
     columnsRow
   ];
   const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  
+  // Create wrapper to hold heading + table
+  const wrapper = document.createElement('div');
+  if (headingCell.hasChildNodes()) {
+    wrapper.appendChild(headingCell);
+  }
+  wrapper.appendChild(table);
+  
+  element.replaceWith(wrapper);
 }

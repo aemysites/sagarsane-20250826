@@ -30,17 +30,21 @@ export default function parse(element, { document }) {
   const h1 = element.querySelector('h1');
   if (h1) headline = h1;
 
-  // Compose content row: breadcrumb + headline (both as elements if possible)
-  const contentRowContent = [];
+  // Compose content cell as a container div
+  const contentCell = document.createElement('div');
   if (breadcrumb) {
-    contentRowContent.push(document.createTextNode(breadcrumb));
+    const breadcrumbP = document.createElement('p');
+    breadcrumbP.textContent = breadcrumb;
+    contentCell.appendChild(breadcrumbP);
   }
-  if (headline) contentRowContent.push(headline);
+  if (headline) {
+    contentCell.appendChild(headline.cloneNode(true));
+  }
 
   // Table rows
   const headerRow = ['Hero (hero17)'];
   const imageRow = [bgImg ? bgImg : ''];
-  const contentRow = [contentRowContent.length ? contentRowContent : ''];
+  const contentRow = [contentCell.hasChildNodes() ? contentCell : ''];
 
   // Compose table
   const cells = [headerRow, imageRow, contentRow];
