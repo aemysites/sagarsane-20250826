@@ -31,3 +31,104 @@
     order: unset;
   }
 }
+
+
+.columns.columns20 {
+  background: #f4f4f4;
+  padding: 32px;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+/* Row layout for the immediate block content */
+.columns.columns20 .columns-2-cols,
+.columns.columns20 .testcolumns,
+.columns.columns20 .block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left column: logo area as a compact green square */
+.columns.columns20 .columns-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  background: #7AC142;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Logo sizing inside green square */
+.columns.columns20 .columns-img-col img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* Right column: vertical stack, vertically centered with logo */
+.columns.columns20 .columns-2-cols .columns-img-col ~ div,
+.columns.columns20 .testcolumns .columns-img-col ~ div,
+.columns.columns20 .block .columns-img-col ~ div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Headline styling */
+.columns.columns20 h2 {
+  color: #181818;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Paragraph styling */
+.columns.columns20 p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Emphasize strong/b for CTA */
+.columns.columns20 p strong,
+.columns.columns20 p b {
+  color: #7AC142;
+  font-weight: 700;
+}
+
+/* Responsive stacking on mobile screens */
+@media (width <= 800px) {
+  .columns.columns20 {
+    padding: 20px 8px;
+  }
+
+  .columns.columns20 .columns-2-cols,
+  .columns.columns20 .testcolumns,
+  .columns.columns20 .block {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .columns.columns20 .columns-img-col {
+    margin: 0 auto;
+  }
+}
