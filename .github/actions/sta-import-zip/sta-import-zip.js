@@ -231,9 +231,6 @@ export async function run() {
   let zipDestination;
   try {
     const downloadUrl = core.getInput('download_url');
-    if (!downloadUrl.includes('spacecat')) {
-      throw new Error(`Invalid download url: ${downloadUrl}`);
-    }
     // eslint-disable-next-line no-new
     new URL(downloadUrl);
 
