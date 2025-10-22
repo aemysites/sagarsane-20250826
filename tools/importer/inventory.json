@@ -1,0 +1,699 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        }
+      ],
+      "styles": {
+        "height": 99
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-27-f2e8b6c85460921dd3d63c08d8113e2c4c70afea",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-27-646ae5354164b8d0caecf36154432daa39ec68e9",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[3]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-04-7fbf9f0eb64fa78247e2a7b7572f4c008eaee785",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ],
+      "styles": {
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Cards",
+      "cluster": 1,
+      "source": "Cards",
+      "target": "Cards (cards1)",
+      "key": "cards1",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-07-c1cde90933973a99daaca388fb6fd7fc65194a12",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[7]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-14-41b6733bb268238cb862d1c72ebe50659a6c0008",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-21-7ee98996c00c04cc4693186433bc883f79f6a3c1",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[19]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-24-eb7b4e7cec520125d0844cf214321407b0fcf88e",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[21]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 2,
+      "source": "Cards",
+      "target": "Cards (cards2)",
+      "key": "cards2",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-09-c2bc7644ed91217024c22e43275c4cd59fb49408",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[9]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-11-62fa4ab4b53b1f6c27d0dde3bcbd7e42cf936ddb",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[11]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-16-48ea34f56f00a958f3983776653d44442af78055",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[15]"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-18-276b5d05e7207f6b9d5fd4a47dca13d38047e757",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[17]"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 3,
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-27-f2e8b6c85460921dd3d63c08d8113e2c4c70afea",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]",
+          "section": "section-4"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-27-646ae5354164b8d0caecf36154432daa39ec68e9",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[3]",
+          "section": "section-4"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-03-f2e8b6c85460921dd3d63c08d8113e2c4c70afea",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]",
+          "section": "section-4"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 4,
+      "source": "Columns",
+      "target": "Columns (columns4)",
+      "key": "columns4",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-24-cc6c5881c16a3c38de6020b414c4c53fad0d7a01",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[14]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-7"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns",
+      "target": "Columns (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-25-e376fc58b351bdc354bb3e26e11963f05d81ffc4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 6,
+      "source": "Cards",
+      "target": "Cards (cards6)",
+      "key": "cards6",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-22-d4c8edec3e9044bc93b7d05bd9c5976293a15768",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[5]/div[1]/div[3]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 7,
+      "source": "Hero",
+      "target": "Hero (hero7)",
+      "key": "hero7",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-16-99a85d5ed07d340ac43d7ad40a3eddefddce57fc",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[10]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 8,
+      "source": "Cards",
+      "target": "Cards (cards8)",
+      "key": "cards8",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-11-bb3368a79da631774b6bc4f3ce54e072db649d3e",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[7]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 9,
+      "source": "Cards",
+      "target": "Cards (cards9)",
+      "key": "cards9",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-08-0ee6334bb432dc4979ba49740c15cc4bc8ed347a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[5]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 10,
+      "source": "Cards",
+      "target": "Cards (cards10)",
+      "key": "cards10",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-15-35bc77bf5db4542f58f45e085f5a7ecb414dac8e",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[4]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns",
+      "target": "Columns (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-17-62fa4ab4b53b1f6c27d0dde3bcbd7e42cf936ddb",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[11]",
+          "section": "section-6"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 12,
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-04-7fbf9f0eb64fa78247e2a7b7572f4c008eaee785",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Tabs",
+      "cluster": 13,
+      "source": "Tabs",
+      "target": "Tabs (tabs13)",
+      "key": "tabs13",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-01-50f7171d5cafce5c552b328c24faeb4602c26936",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Tabs",
+      "cluster": 14,
+      "source": "Tabs",
+      "target": "Tabs (tabs14)",
+      "key": "tabs14",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-03-d5eedff947ca10d7ac5b25e0bf86cbd815249073",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 15,
+      "source": "Cards",
+      "target": "Cards (cards15)",
+      "key": "cards15",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-03-825a958cbc55724b1ca407081b933bfcd2a015c0",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 16,
+      "source": "Columns",
+      "target": "Columns (columns16)",
+      "key": "columns16",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-26-9f9d9ce38d3da8f63ade6e7fd1118acccf29b15d",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 17,
+      "source": "Hero",
+      "target": "Hero (hero17)",
+      "key": "hero17",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-02-50f7171d5cafce5c552b328c24faeb4602c26936",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-5"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 18,
+      "source": "Header",
+      "target": "Header (header18)",
+      "key": "header18",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards (no images)",
+      "cluster": 19,
+      "source": "Cards",
+      "target": "Cards (cardsNoImages19)",
+      "key": "cardsNoImages19",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+          "uuid": "4dc847f3-04-460e99b418ded283d6f137a05568020125203d4c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 20,
+      "source": "Columns",
+      "target": "Columns (columns20)",
+      "key": "columns20",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-04-57c7b1aa906601eabe7cb3eea4568f689c81c2f7",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 21,
+      "source": "Columns",
+      "target": "Columns (columns21)",
+      "key": "columns21",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-01-4130e0169ed4c673a7f233fd2e283b1580f034f9",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 22,
+      "source": "Header",
+      "target": "Header (header22)",
+      "key": "header22",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+          "uuid": "20c2001d-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 23,
+      "source": "Header",
+      "target": "Header (header23)",
+      "key": "header23",
+      "instances": [
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+          "uuid": "b135541f-00-b2c8ec8cc7206114599cd049698cc67e0e048d63",
+          "xpath": "/html[1]/body[1]/header[1]"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-02-7dd30d1664c2bfa2683d909f4cee15b4b6d3c9e1",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-05-3b27b6f91909629403e8975894d279ae931c0b4c",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[6]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-06-d29317c35fade25c4a84f7d40e93e6e715e8631d",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[7]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-08-38ca51bd7a9c803efd186be536418595012af1ed",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[8]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-10-99a85d5ed07d340ac43d7ad40a3eddefddce57fc",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[10]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-12-14eded3491cd44323002f9008ba0c98df03d2863",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[12]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-13-163f42f08beb82de3172b60687f64f577184e809",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-15-1b2791ad6b0e5dcfe91c333f7f1c69b2aaa46693",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[14]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-17-02fead64cc97ea7a32da035ff6b7432198bddc3e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[16]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-19-5a7aaa395a70c1f007c1416a1f8e0bb78e18d30e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[18]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-20-16c050095c38f69ffd3f3038b03e482fc6a2ab7e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[19]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-22-548690b91eb928c9a1b3b87072998e8bc36f3de0",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[20]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-23-f9095f2f47e3952b997c41a606016177c81b7e0c",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[21]/div[1]/h3[1]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/",
+      "urlHash": "20c2001dde17df8dca4361c913fbae08067a9ba1",
+      "uuid": "20c2001d-25-957de3edf64667c94eeef861d72b59153fb06579",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[22]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-01-7fbf9f0eb64fa78247e2a7b7572f4c008eaee785",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-05-68d0a99ea8b0025e8d2614fc5a6c67417c6ad6c9",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-06-00dafa115920007c7cc5037ab9b794d452552b95",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-07-b832d20ef63f99986e84af91145bbdfe3a799907",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[4]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-09-8a05914f3be20bf64ca4009a53e00cf7d75daaa7",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[6]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-10-3b27b6f91909629403e8975894d279ae931c0b4c",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[6]"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-12-791289821d3c7fc81590f26c402012d785bc0cdb",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-13-7c2844f91378de164825432bb510f5569ad23e00",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[2]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-14-d533dce7729326d2a2af405536af300f934d0e1e",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[3]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-18-eebbfe3159e1b5377a920893b871e4ffe83574fe",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[1]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-19-5e649babe193345a639d8e9de0c80806916c2df1",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[3]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-20-5e319d7a05a2e7e4a1beb80579a8ebf8faba32f0",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[4]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-21-68e123562d45cfbaa8346cc570509206e2205c35",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[5]/div[1]/div[2]",
+      "section": "section-5"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-23-96919156a4b577356e05cb234709fe67fd701109",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[14]/div[1]/div[1]/div[1]/div[1]",
+      "section": "section-7"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/industries/robotics/",
+      "urlHash": "4dc847f3dd28252ac835454a9a1e99b7674d4c05",
+      "uuid": "4dc847f3-26-092aff3ff3f9b8f69fbc4b4d20b32cd16085abf5",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+      "urlHash": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b",
+      "uuid": "b135541f-02-c45c55c2c88384538a00d361852999c1fc22b55c",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]",
+      "section": "section-1"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 7
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(26, 26, 26) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 2
+    },
+    {
+      "name": "section-3",
+      "background": "rgb(241, 241, 241) none no-repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-4",
+      "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    },
+    {
+      "name": "section-5",
+      "background": "rgb(247, 247, 247) none no-repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 15
+    },
+    {
+      "name": "section-6",
+      "background": "rgb(255, 255, 255) none no-repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-7",
+      "background": "rgb(26, 26, 26) none no-repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 2
+    }
+  ]
+}

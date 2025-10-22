@@ -1,0 +1,28 @@
+{
+  "templates": [
+    {
+      "name": "'video gallery page'",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://www.nvidia.com/en-us/industries/robotics/",
+          "uuid": "4dc847f3dd28252ac835454a9a1e99b7674d4c05"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/",
+          "uuid": "20c2001dde17df8dca4361c913fbae08067a9ba1"
+        }
+      ]
+    },
+    {
+      "name": "'Article page'",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
+          "uuid": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b"
+        }
+      ]
+    }
+  ]
+}
