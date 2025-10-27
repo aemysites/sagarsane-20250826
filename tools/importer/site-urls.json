@@ -1,27 +1,627 @@
 {
   "originUrl": "https://www.nvidia.com",
   "aborted": false,
+  "lastCrawled": "https://www.nvidia.com/en-in/",
   "urls": [
     {
+      "url": "https://www.nvidia.com/cs-cz/",
+      "source": "CRAWL",
+      "targetPath": "/cs-cz",
+      "id": "a5ac26f2166754078722b454af69f75f14a2a1a4"
+    },
+    {
+      "url": "https://www.nvidia.com/da-dk/",
+      "source": "CRAWL",
+      "targetPath": "/da-dk",
+      "id": "13adb937dde26e0e3a4f2c8fc50ae5baf74ac6db"
+    },
+    {
+      "url": "https://www.nvidia.com/de-at/",
+      "source": "CRAWL",
+      "targetPath": "/de-at",
+      "id": "0810fcfb90ea6c180c546547cbec3e2b8e117001"
+    },
+    {
+      "url": "https://www.nvidia.com/de-de/",
+      "source": "CRAWL",
+      "targetPath": "/de-de",
+      "id": "cf23165055a71db61a4f963b74fdc1a46fa33046"
+    },
+    {
+      "url": "https://www.nvidia.com/en-au/",
+      "source": "CRAWL",
+      "targetPath": "/en-au",
+      "id": "39cd6c9d544dd9ebc3768c064b1a6fda81af29d1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-eu/",
+      "source": "CRAWL",
+      "targetPath": "/en-eu",
+      "id": "0faa3cc33bee29324f1f447cb4150e39da963d0e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-gb/",
+      "source": "CRAWL",
+      "targetPath": "/en-gb",
+      "id": "a482dc22aead532a5702cde2ca4b8fd9feb05c85"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/",
+      "source": "CRAWL",
+      "targetPath": "/en-in",
+      "id": "3e6c5760eef77ba2460c22596fa2213d8bb19ad0"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai-data-science/products/cuopt/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai-data-science/products/cuopt",
+      "id": "1043b821cd0deae39aadc6efba634f18b270d432"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai-data-science/products/morpheus/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai-data-science/products/morpheus",
+      "id": "8c22ed07b2ae4d6a86c91c69c9481c0ead8b2aaf"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai-data-science/products/nemo/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai-data-science/products/nemo",
+      "id": "844468dd4a88cdedce6cd42a0c5423efd68fbb6b"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai-data-science/products/nim-microservices/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai-data-science/products/nim-microservices",
+      "id": "b4fa73a6ef196665df32b8b95baed11114ca590c"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai-on-rtx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai-on-rtx",
+      "id": "7a75a1770814ecc70ae40680ce56074b8a236e2c"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai",
+      "id": "d378a15c8fa874413313b9250e6d99fe02f523b8"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai/cosmos/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai/cosmos",
+      "id": "5ed600322c853ae9560dba10473d8445c081632e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/ai/dynamo/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/ai/dynamo",
+      "id": "d9c17ce7de7a1173c80cb929744b197003ee3a39"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/autonomous-machines/embedded-systems/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/autonomous-machines/embedded-systems",
+      "id": "3924c399a3a2e139dc1fa2e976ec035d02254f90"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/autonomous-machines/intelligent-video-analytics-platform/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/autonomous-machines/intelligent-video-analytics-platform",
+      "id": "0ae005a77d279a6e13785f3bc930cba24216670a"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/clara/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/clara",
+      "id": "1b23ccb44443965229839f49ff3573370d51b25e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/clara/biopharma/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/clara/biopharma",
+      "id": "4024304e4c5ad12a8099704c675e7db50ce174b3"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/clara/medical-devices/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/clara/medical-devices",
+      "id": "bbfdcd92cbb65a03814ca9e62d986cb88b67b6d1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center",
+      "id": "e1286fef4d20730cccf87f4ccfaa2bb8a38920ec"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/ai-data-platform/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/ai-data-platform",
+      "id": "b8b574faf66d3b79151bd3ca58d7499a0401b6f4"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/colocation-partners/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/colocation-partners",
+      "id": "8a2ee5157b2be9029ef86b64217b9de5afd53d78"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/dgx-cloud/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/dgx-cloud",
+      "id": "05c1a3259f9de0d0998574415cd1363d4ae33be7"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/dgx-platform/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/dgx-platform",
+      "id": "d37f91b73a01dbf97de821642ba1f33a598fabc6"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/enterprise-software/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/enterprise-software",
+      "id": "9c35b592d57ff8ccec5599d4b67fcc0546ce0ce8"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/gpu-cloud-computing/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/gpu-cloud-computing",
+      "id": "284b1f120d08ee58d98e22aed1e63e599cc59865"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/grace-cpu/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/grace-cpu",
+      "id": "d8646fccad0afc7798dd47afa333163ed629ff32"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/hgx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/hgx",
+      "id": "19ffcfcb9ecab1ab1006b53ff5b2ce8535e738ad"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/magnum-io/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/magnum-io",
+      "id": "d6a26169d697ab191a7bde8aee113d0fc9bfa335"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/mission-control/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/mission-control",
+      "id": "42f98f87f3fd9360746336895322d9dffb0873b4"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/products/ai-enterprise/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/products/ai-enterprise",
+      "id": "6074e497a5838c31a9fc923c411b4847abd5ef8a"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/products/mgx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/products/mgx",
+      "id": "d2c1f4d022aeb70d9aa7846b834f588915e02c8d"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/products/ovx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/products/ovx",
+      "id": "cfcfa8f9995e5477b5fd3d217187a32f851c9dc1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/solutions/accelerated-computing/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/solutions/accelerated-computing",
+      "id": "3cc82c32d3440022c8e402ce4cafce5e20430ece"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/solutions/mlops/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/solutions/mlops",
+      "id": "3245bf10dde8e3e4a1e81633c2b58b3ab2ef109e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/sustainable-computing/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/sustainable-computing",
+      "id": "8ffe1d8b7b103b38f58def4850e9e789c71dcc66"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/technologies/blackwell-architecture/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/technologies/blackwell-architecture",
+      "id": "6b3f368bc68aa1a2d8c6735d7bd41e327bb838e8"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/technologies/hopper-architecture/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/technologies/hopper-architecture",
+      "id": "7a8727157aae00cebe58d85a6833737ba51b437e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/data-center/virtual-solutions/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/data-center/virtual-solutions",
+      "id": "323340affbe9f7401fb4de6fead5822f2c62cefc"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/deep-learning-ai/solutions/data-science/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/deep-learning-ai/solutions/data-science",
+      "id": "47afe4ac27a494fdaeda599a9cf5673ac0de7e03"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/deep-learning-ai/solutions/data-science/apache-spark-3/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/deep-learning-ai/solutions/data-science/apache-spark-3",
+      "id": "b9af1dd266920b8d72e63fb10cb3907e204aa7a8"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/deep-learning-ai/solutions/data-science/workbench/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/deep-learning-ai/solutions/data-science/workbench",
+      "id": "fd5e403648c7fd4616264d96e8a432c70efcf719"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/design-visualization/software/broadcast-app/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/design-visualization/software/broadcast-app",
+      "id": "8aa076bcb12c9b7cb7a1027d45c276b59a0083f1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/edge-computing/products/igx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/edge-computing/products/igx",
+      "id": "22b6b635f2a4ec2fc32b19f6cf9bbc2df95a6080"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/broadcasting/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/broadcasting",
+      "id": "60d251a836a1184995d47ae83b9c8015c941a7e3"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/graphics-cards/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/graphics-cards",
+      "id": "c71b0104bc6bc122220f69b45d78020508fda35d"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/laptops/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/laptops",
+      "id": "89349ed35987797aff6c831368dd10445d4eb083"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/products/g-sync-monitors/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/products/g-sync-monitors",
+      "id": "d4a670772208bbe56875a31bc2a953ef84f9af33"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/rtx/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/rtx",
+      "id": "048b4799c15530d3e9520851331a4101b1288f62"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/technologies/dlss/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/technologies/dlss",
+      "id": "9487153c5377818161bb002ad5e156787c984941"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/geforce/technologies/reflex/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/geforce/technologies/reflex",
+      "id": "6ef6ebbf86c3efe22ee759a37675beba0be75081"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/glossary/digital-twin/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/glossary/digital-twin",
+      "id": "10dfa93cfa2a62047b209e5df18c89a86b55fbf3"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/gpu-cloud/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/gpu-cloud",
+      "id": "4b93657d2f401504d517b4ac5ec25e84970f8894"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/networking/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/networking",
+      "id": "d22bc43ecb4253f1b00e6a2853f727c21b0e67e6"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/networking/products/data-processing-unit/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/networking/products/data-processing-unit",
+      "id": "15351415ab7270045c30a953160f6472fc694f17"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/networking/products/ethernet/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/networking/products/ethernet",
+      "id": "19a601bf4c16fd356865740ff2c974744cd58d09"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/networking/products/infiniband/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/networking/products/infiniband",
+      "id": "c90f44294a4d116f564121542bf96ad12f550a89"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/networking/products/software/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/networking/products/software",
+      "id": "c4e1d28a013494ec56fdc838eb7f0e9857f982ff"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/omniverse/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/omniverse",
+      "id": "899adfa8943e89f79920292508d269fe006fd0d6"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/products/workstations/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/products/workstations",
+      "id": "5c1fa784ada616851bc7f6478d0d98fede8c1c15"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/products/workstations/ai-workstations/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/products/workstations/ai-workstations",
+      "id": "c417f61cf0bdeefdb7c317c048e918e7488af20b"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/products/workstations/dgx-spark/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/products/workstations/dgx-spark",
+      "id": "8dc444c0bc5a4fbce1992b29e6315d25f2b8cb78"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/products/workstations/professional-desktop-gpus/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/products/workstations/professional-desktop-gpus",
+      "id": "28d7286931f2fea005e80c90d42ad521a4236ba0"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/products/workstations/professional-laptops/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/products/workstations/professional-laptops",
+      "id": "1e497a9f775f69deec7f2c19bb3095a383fdda20"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/software/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/software",
+      "id": "d049fa59308c49ac1437d62a194422d4fefe9b24"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/software/nvidia-app-enterprise/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/software/nvidia-app-enterprise",
+      "id": "a59d12efcab395427cb731f8f1a34421631d1f0e"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/software/nvidia-app/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/software/nvidia-app",
+      "id": "97ad450644b645320b738a13b9d4986bd8ff0de1"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/software/rtx-desktop-manager/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/software/rtx-desktop-manager",
+      "id": "16bda1a787e645a3ed855fa6e71ff60da285b77d"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/software/run-ai/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/software/run-ai",
+      "id": "f01c3e6d2a8a746c55addba8879596017e1543e8"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/ai/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/ai",
+      "id": "4e0182d798f88a64cc04d8851110009bd9b9b009"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/ai/conversational-ai/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/ai/conversational-ai",
+      "id": "fd4600bebac1ff0b72d34a7798f219a9c745dc3b"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/ai/cybersecurity/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/ai/cybersecurity",
+      "id": "b2fde8cc577a0ca702f5db368b6583cba84fd59d"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/ai/generative-ai/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/ai/generative-ai",
+      "id": "1075fc20121748497751e9e97ad280393ee701b0"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/autonomous-vehicles/in-vehicle-computing/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/autonomous-vehicles/in-vehicle-computing",
+      "id": "d26bd2daae22c89905ef3b06d888cf838dde46b7"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/cae/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/cae",
+      "id": "2dbeb4dc77d0e0aba1dff4de7ea5d494e1b10207"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/solutions/design-and-simulation/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/solutions/design-and-simulation",
+      "id": "ec4de0bbd78ec8a0c2b9f1cc0214994f0e685ac2"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/studio/laptops-desktops/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/studio/laptops-desktops",
+      "id": "7533b6c3652aab8952ae9b4c9b76bc1577a4c0da"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/studio/software/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/studio/software",
+      "id": "9c1e503f41db8431a7c8c78ef29cee6a83e0dcef"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/technologies/ada-architecture/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/technologies/ada-architecture",
+      "id": "f83fd40ad2d9b8fcf3ab2f6dc4721fc9ee073c88"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/technologies/cuda-x/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/technologies/cuda-x",
+      "id": "374255f41362ca1b7876d902b04bd0e6255d42a4"
+    },
+    {
+      "url": "https://www.nvidia.com/en-me/",
+      "source": "CRAWL",
+      "targetPath": "/en-me",
+      "id": "bbd7c602c22107c009c0a5aaf9478dfec8d1c410"
+    },
+    {
+      "url": "https://www.nvidia.com/en-sg/",
+      "source": "CRAWL",
+      "targetPath": "/en-sg",
+      "id": "3ff408709897cf66a489d09f5c9c479ee094fef8"
+    },
+    {
       "url": "https://www.nvidia.com/en-us/",
-      "source": "MANUAL",
+      "source": "CRAWL",
       "targetPath": "/en-us",
       "id": "20c2001dde17df8dca4361c913fbae08067a9ba1"
     },
     {
-      "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
-      "source": "MANUAL",
-      "targetPath": "/en-us/agreements/enterprise-software/nvidia-software-license-agreement",
-      "id": "b135541f5b17efe6e9cc66dedfcfc5cf04205d5b"
+      "url": "https://www.nvidia.com/en-us/geforce-now/",
+      "source": "CRAWL",
+      "targetPath": "/en-us/geforce-now",
+      "id": "43f479b18507155f4df37e0ac64da31cd5b1d673"
     },
     {
-      "url": "https://www.nvidia.com/en-us/industries/robotics/",
-      "source": "MANUAL",
-      "targetPath": "/en-us/industries/robotics",
-      "id": "4dc847f3dd28252ac835454a9a1e99b7674d4c05"
+      "url": "https://www.nvidia.com/en-us/shield/",
+      "source": "CRAWL",
+      "targetPath": "/en-us/shield",
+      "id": "e7746565326161cd0447e04905ab99bbdc4cc820"
+    },
+    {
+      "url": "https://www.nvidia.com/es-es/",
+      "source": "CRAWL",
+      "targetPath": "/es-es",
+      "id": "60aae3d1e8b59540448b9902a1cdb27c4af56507"
+    },
+    {
+      "url": "https://www.nvidia.com/es-la/",
+      "source": "CRAWL",
+      "targetPath": "/es-la",
+      "id": "441ad9a93a2fff4c815a89b46a62ffcdadd6a95b"
+    },
+    {
+      "url": "https://www.nvidia.com/fi-fi/",
+      "source": "CRAWL",
+      "targetPath": "/fi-fi",
+      "id": "3694c7aaa4eddddca598b03d2a38ebf2a703b480"
+    },
+    {
+      "url": "https://www.nvidia.com/fr-be/",
+      "source": "CRAWL",
+      "targetPath": "/fr-be",
+      "id": "d88617eaf151a1405e7040eac03cf287724c1dab"
+    },
+    {
+      "url": "https://www.nvidia.com/fr-fr/",
+      "source": "CRAWL",
+      "targetPath": "/fr-fr",
+      "id": "02fb827c386e9567eb3ead9d0e724754cb7f7f2e"
+    },
+    {
+      "url": "https://www.nvidia.com/it-it/",
+      "source": "CRAWL",
+      "targetPath": "/it-it",
+      "id": "9530188fe8aad75aa95dffa1e4109bd8f315c81d"
+    },
+    {
+      "url": "https://www.nvidia.com/ja-jp/",
+      "source": "CRAWL",
+      "targetPath": "/ja-jp",
+      "id": "9f0bf8df7fac57216495a91d3b242d44eb89352c"
+    },
+    {
+      "url": "https://www.nvidia.com/ko-kr/",
+      "source": "CRAWL",
+      "targetPath": "/ko-kr",
+      "id": "270cbe64b5c157c048e005b8e2734b2ca57bca46"
+    },
+    {
+      "url": "https://www.nvidia.com/nb-no/",
+      "source": "CRAWL",
+      "targetPath": "/nb-no",
+      "id": "56bfc7914834ceffbf818a167230abdf3593481d"
+    },
+    {
+      "url": "https://www.nvidia.com/nl-nl/",
+      "source": "CRAWL",
+      "targetPath": "/nl-nl",
+      "id": "3816b847b4c61592578748d2c18d267885a2437e"
+    },
+    {
+      "url": "https://www.nvidia.com/pl-pl/",
+      "source": "CRAWL",
+      "targetPath": "/pl-pl",
+      "id": "5434c74fa7dc65541c5ac29d0c4b331f946dd1e8"
+    },
+    {
+      "url": "https://www.nvidia.com/pt-br/",
+      "source": "CRAWL",
+      "targetPath": "/pt-br",
+      "id": "7e3d1e07f7cdf39bbf2962745740f5236cf2ae83"
+    },
+    {
+      "url": "https://www.nvidia.com/ro-ro/",
+      "source": "CRAWL",
+      "targetPath": "/ro-ro",
+      "id": "069d296c91dd737bae1b7496a6e2fac05155cfd4"
+    },
+    {
+      "url": "https://www.nvidia.com/sv-se/",
+      "source": "CRAWL",
+      "targetPath": "/sv-se",
+      "id": "7466e94ce72178caf947ad9d7426d8df1ffc2a05"
+    },
+    {
+      "url": "https://www.nvidia.com/tr-tr/",
+      "source": "CRAWL",
+      "targetPath": "/tr-tr",
+      "id": "ee653bb59257a8e37783558ec9642aa7b1da0efe"
+    },
+    {
+      "url": "https://www.nvidia.com/zh-tw/",
+      "source": "CRAWL",
+      "targetPath": "/zh-tw",
+      "id": "a62fd1778cf78ceb0a29361fd4f16f0a265a8fe7"
     }
   ],
-  "lastCrawled": "MANUAL",
   "crawlOptions": {
     "timeout": 10000,
     "inclusionPatterns": [],
@@ -29,11 +629,43 @@
     "limit": 100,
     "sameDomain": true,
     "keepHash": false,
-    "strategy": "manual",
+    "strategy": "crawl",
+    "logger": {},
     "strategiesAttempted": [
-      "MANUAL"
+      "SITEMAPS",
+      "CRAWL"
     ]
   },
-  "extractionErrors": [],
-  "errorCountMessage": "none"
+  "extractionErrors": [
+    {
+      "url": "https://www.nvidia.com/en-in/deep-learning-ai/solutions/machine-learning/",
+      "status": "301 Moved Permanently Redirect: https://developer.nvidia.com/cuml"
+    },
+    {
+      "url": "https://www.nvidia.com/ru-ru/",
+      "status": "301 Moved Permanently Redirect: https://www.nvidia.com/en-eu/"
+    },
+    {
+      "url": "https://www.nvidia.com/en-il/",
+      "status": "301 Moved Permanently Redirect: https://www.nvidia.com/en-eu/"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/gpu-cloud/nemo-llm-service/",
+      "status": "301 Moved Permanently Redirect: https://www.nvidia.com/en-in/ai-data-science/products/nemo/"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/omniverse/cloud/",
+      "status": "301 Moved Permanently Redirect: https://www.nvidia.com/en-in/data-center/dgx-cloud/"
+    },
+    {
+      "url": "https://www.nvidia.com/en-in/self-driving-cars/in-vehicle-computing/",
+      "status": "301 Moved Permanently Redirect: https://www.nvidia.com/en-in/solutions/autonomous-vehicles/in-vehicle-computing/"
+    },
+    {
+      "url": "https://www.nvidia.com/",
+      "status": "307 Temporary Redirect Redirect: https://www.nvidia.com/en-us/"
+    }
+  ],
+  "errorCountMessage": "{\"E_301\":6,\"E_307\":1}",
+  "error": null
 }
