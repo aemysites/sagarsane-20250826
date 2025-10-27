@@ -1,68 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Cards (cards6) block parser
-  const newsFeed = element.querySelector('.latest-news__items');
-  if (!newsFeed) return;
+  // Cards (cards6) block: 2 columns, multiple rows, first row is block name
+  const headerRow = ['Cards (cards6)'];
+  const rows = [headerRow];
 
-  const cardEls = Array.from(newsFeed.querySelectorAll('.latest-news__item'));
-  if (!cardEls.length) return;
+  // Find the newsfeed block containing the cards
+  const newsfeed = element.querySelector('.nv-newsfeed-comp');
+  if (!newsfeed) return;
 
-  const rows = [];
-  rows.push(['Cards (cards6)']);
-
-  cardEls.forEach(card => {
-    // Image cell
-    const keyVisual = card.querySelector('.latest-news__item__key-visual');
-    let imgEl = keyVisual ? keyVisual.querySelector('img') : null;
-    const imgCell = imgEl || '';
-
-    // Text cell
-    const body = card.querySelector('.latest-news__item__body');
-    let textFragments = [];
-    if (body) {
-      // Date
-      const date = body.querySelector('.latest-news__item__body__date');
-      if (date) {
-        const dateP = document.createElement('p');
-        dateP.textContent = date.textContent.trim();
-        dateP.style.fontSize = 'small';
-        textFragments.push(dateP);
-      }
-      // Title
-      const title = body.querySelector('.latest-news__item__body__title');
-      if (title) {
-        const titleEl = document.createElement('strong');
-        titleEl.textContent = title.textContent.trim();
-        textFragments.push(titleEl);
-      }
-      // Description
-      const desc = body.querySelector('.latest-news__item__body__description');
-      if (desc) {
-        let descText = desc.textContent.trim();
-        // If there's a trailing link, extract it and append as a CTA
-        const link = desc.querySelector('a');
-        if (link && link.textContent.trim()) {
-          // Remove link text from descText if present
-          descText = descText.replace(link.textContent.trim(), '').trim();
-          const descP = document.createElement('p');
-          descP.textContent = descText;
-          textFragments.push(descP);
-          // Add CTA link as its own element
-          const cta = document.createElement('a');
-          cta.href = link.href;
-          cta.textContent = link.textContent.trim();
-          textFragments.push(cta);
-        } else {
-          // If no link, just add the description
-          const descP = document.createElement('p');
-          descP.textContent = descText;
-          textFragments.push(descP);
-        }
-      }
+  // Find all card items
+  const items = newsfeed.querySelectorAll('.latest-news__item');
+  items.forEach((item) => {
+    // --- Image cell ---
+    let imgCell = null;
+    const keyVisual = item.querySelector('.latest-news__item__key-visual');
+    if (keyVisual) {
+      // Use the <img> directly (do not clone)
+      const img = keyVisual.querySelector('img');
+      if (img) imgCell = img;
     }
-    rows.push([imgCell, textFragments]);
+
+    // --- Text cell ---
+    const body = item.querySelector('.latest-news__item__body');
+    if (body) {
+      // Compose text cell: date, title, description
+      // Use elements directly
+      const date = body.querySelector('.latest-news__item__body__date');
+      const title = body.querySelector('.latest-news__item__body__title');
+      const desc = body.querySelector('.latest-news__item__body__description');
+      // Compose cell content in order
+      const textCell = [];
+      if (date) textCell.push(date);
+      if (title) textCell.push(title);
+      if (desc) textCell.push(desc);
+      rows.push([imgCell, textCell]);
+    }
   });
 
+  // Create the block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace the original element
   element.replaceWith(block);
 }

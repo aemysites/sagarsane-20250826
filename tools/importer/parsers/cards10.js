@@ -1,46 +1,40 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Cards (cards10) block: 2 columns, multiple rows (image | text)
+  // Cards (cards10) block
   const headerRow = ['Cards (cards10)'];
   const rows = [headerRow];
 
-  // Find the parent container holding all cards
-  // The cards are .nv-teaser.teaser.nv-teaser--card
-  const cardNodes = element.querySelectorAll('.nv-teaser.teaser.nv-teaser--card');
+  // Find the parent container for cards
+  // Cards are .nv-teaser.teaser.nv-teaser--card
+  const cardElements = element.querySelectorAll('.nv-teaser.teaser.nv-teaser--card');
 
-  cardNodes.forEach((card) => {
-    // --- IMAGE COLUMN ---
-    // Find the image inside the card
-    const img = card.querySelector('img');
-    // Defensive: use the actual <img> element if present, else null
-    const imgEl = img || '';
+  cardElements.forEach((card) => {
+    // Image (first cell)
+    const img = card.querySelector('.cmp-image img');
+    // Defensive: fallback to null if not found
+    const imageCell = img ? img : '';
 
-    // --- TEXT COLUMN ---
-    // Container for text content
-    const textCol = document.createElement('div');
-
-    // Title (h3)
-    const title = card.querySelector('.cmp-teaser__title');
-    if (title) {
-      textCol.appendChild(title);
+    // Text content (second cell)
+    const textContainer = card.querySelector('.general-container-text');
+    let textCellContent = [];
+    if (textContainer) {
+      // Title
+      const title = textContainer.querySelector('.cmp-teaser__title');
+      if (title) textCellContent.push(title);
+      // Description (ul)
+      const desc = textContainer.querySelector('.cmp-teaser__description');
+      if (desc) textCellContent.push(desc);
+      // CTA link
+      const cta = textContainer.querySelector('.cmp-teaser__action-link');
+      if (cta) textCellContent.push(cta);
     }
+    // Defensive: if nothing found, fallback to empty string
+    if (textCellContent.length === 0) textCellContent = [''];
 
-    // Description (ul or .cmp-teaser__description)
-    const desc = card.querySelector('.cmp-teaser__description');
-    if (desc) {
-      textCol.appendChild(desc);
-    }
-
-    // CTA (link)
-    const cta = card.querySelector('.cmp-teaser__action-link');
-    if (cta) {
-      textCol.appendChild(cta);
-    }
-
-    rows.push([imgEl, textCol]);
+    rows.push([imageCell, textCellContent]);
   });
 
-  // Create the table block
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(block);
 }

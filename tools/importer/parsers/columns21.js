@@ -1,32 +1,30 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Only process if there are at least 2 child sets (columns)
-  const sets = Array.from(element.querySelectorAll(':scope > .page-footer-link-set'));
-  if (!sets.length) return;
-
-  // Header row: Block name
+  // Always use the block name as the header row
   const headerRow = ['Columns (columns21)'];
 
-  // Build columns: each column is a cell in the second row
-  const columns = sets.map((set) => {
-    // Get the title (heading)
-    const title = set.querySelector('.page-footer-link-set__title');
-    // Get the list of links
-    const links = set.querySelector('.page-footer-link-set__links');
-    // Compose a column cell: title + links
-    // Defensive: Only include if present
+  // Defensive: get all immediate child column sets
+  const columnSets = Array.from(element.querySelectorAll(':scope > div.page-footer-link-set'));
+
+  // For each column, collect its title and list
+  const columns = columnSets.map((colSet) => {
+    // Find the title (heading)
+    const title = colSet.querySelector('.page-footer-link-set__title');
+    // Find the list (ul)
+    const list = colSet.querySelector('.page-footer-link-set__links');
+    // Compose a column cell: title + list
     const cellContent = [];
     if (title) cellContent.push(title);
-    if (links) cellContent.push(links);
+    if (list) cellContent.push(list);
     return cellContent;
   });
 
-  // Table rows: header + columns row
+  // Build the table rows
   const rows = [headerRow, columns];
 
-  // Create table block
+  // Create the block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
 
-  // Replace original element
+  // Replace the original element with the block table
   element.replaceWith(block);
 }

@@ -1,49 +1,41 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract column content from a grid column container
-  function extractColumnContent(col) {
-    const parts = [];
-    // Title (h2 or h3)
-    const title = col.querySelector('h2, h3');
-    if (title) parts.push(title);
-    // Description (div.description or p)
-    const desc = col.querySelector('.description, p');
-    if (desc) parts.push(desc);
-    // Button (a.btn-content, a.btncta)
-    const btn = col.querySelector('a.btn-content, a.btncta');
-    if (btn) parts.push(btn);
-    return parts;
+  // Helper to extract column content from source HTML
+  function getColumnContent(container) {
+    const col = [];
+    // Title
+    const title = container.querySelector('.nv-title .title');
+    if (title) col.push(title);
+    // Description
+    const desc = container.querySelector('.nv-text .description, .nv-text p');
+    if (desc) col.push(desc);
+    // Button (CTA)
+    const btn = container.querySelector('.nv-button a');
+    if (btn) col.push(btn);
+    return col;
   }
 
-  // Find the main grid columns (top-level responsivegrid children)
-  const topGrid = element.querySelector('.aem-Grid');
-  if (!topGrid) return;
+  // Find top-level column containers (the two main columns)
+  // Use :scope > div > div > div > div to get the two main columns
+  const mainGrid = element.querySelector('.aem-Grid.aem-Grid--12');
+  if (!mainGrid) return;
+  const columns = Array.from(mainGrid.children).filter(
+    (child) => child.classList.contains('nv-container')
+  );
 
-  // Find the two column containers (each is a responsivegrid)
-  const columns = Array.from(topGrid.children)
-    .filter(child => child.classList.contains('responsivegrid'));
+  // Defensive: fallback if columns not found
   if (columns.length < 2) return;
 
-  // For each column, extract its grid and content
-  const colCells = columns.map(col => {
-    // Each column has a nested .aem-Grid with its content blocks
-    const innerGrid = col.querySelector('.aem-Grid');
-    if (!innerGrid) return [];
-    // Compose all relevant content from the innerGrid
-    return extractColumnContent(innerGrid);
-  });
+  // Extract content for each column
+  const leftCol = getColumnContent(columns[0]);
+  const rightCol = getColumnContent(columns[1]);
 
-  // Defensive: flatten arrays, but keep each column's content grouped
-  const row = colCells.map(parts => parts);
-
-  // Table header
+  // Build table rows
   const headerRow = ['Columns (columns4)'];
-  // Table rows: second row is the columns
-  const cells = [headerRow, row];
+  const contentRow = [leftCol, rightCol];
 
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
+  const cells = [headerRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
 
-  // Replace original element
-  element.replaceWith(block);
+  element.replaceWith(table);
 }
