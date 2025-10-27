@@ -1,54 +1,59 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Compose the header row
-  const headerRow = ['Columns (columns11)'];
-
-  // Find the section label and main heading
-  const allH2s = element.querySelectorAll('h2.title');
-  let label = null, mainHeading = null;
-  if (allH2s.length > 1) {
-    label = allH2s[0];
-    mainHeading = allH2s[1];
-  } else if (allH2s.length === 1) {
-    mainHeading = allH2s[0];
+  // Extract the two column containers
+  function getColumnContainers(el) {
+    // Find .aem-Grid > .aem-GridColumn that contain .aem-Grid inside
+    const grids = Array.from(el.querySelectorAll('.aem-Grid > .aem-GridColumn'));
+    return grids.filter(g => g.querySelector('.aem-Grid'));
   }
-  const headingCell = document.createElement('div');
-  if (label) headingCell.appendChild(label.cloneNode(true));
-  if (mainHeading) headingCell.appendChild(mainHeading.cloneNode(true));
 
-  // Find the two column containers
-  const columnContainers = Array.from(
-    element.querySelectorAll('.nv-container.container.responsivegrid')
-  ).filter(colEl => colEl.querySelector('h3'));
+  // Extract main section heading and headline
+  const mainGrid = element.querySelector('.aem-Grid');
+  let sectionTitle = null;
+  let sectionSubtitle = null;
+  if (mainGrid) {
+    const smallestTitle = mainGrid.querySelector('.nv-title.text.h--smallest .title');
+    if (smallestTitle) sectionTitle = smallestTitle.cloneNode(true);
+    const mediumTitle = mainGrid.querySelector('.nv-title.text.h--medium .title');
+    if (mediumTitle) sectionSubtitle = mediumTitle.cloneNode(true);
+  }
 
-  // Extract content for each column
+  // Insert heading and headline above the block
+  if (sectionTitle || sectionSubtitle) {
+    const wrapper = document.createElement('div');
+    if (sectionTitle) wrapper.appendChild(sectionTitle);
+    if (sectionSubtitle) wrapper.appendChild(sectionSubtitle);
+    element.parentNode.insertBefore(wrapper, element);
+  }
+
+  // Extract columns
+  const colContainers = getColumnContainers(element);
   function extractColumnContent(colEl) {
+    const colGrid = colEl.querySelector('.aem-Grid');
+    if (!colGrid) return document.createElement('div');
+    const titleEl = colGrid.querySelector('.nv-title .title');
+    const descEl = colGrid.querySelector('.nv-text .description');
+    const btnWrap = colGrid.querySelector('.nv-button-standard');
+    let btnEl = null;
+    if (btnWrap) btnEl = btnWrap.querySelector('a');
     const cell = document.createElement('div');
-    const heading = colEl.querySelector('h3');
-    if (heading) cell.appendChild(heading.cloneNode(true));
-    const desc = colEl.querySelector('.description p');
-    if (desc) cell.appendChild(desc.cloneNode(true));
-    const cta = colEl.querySelector('.nv-button-standard a');
-    if (cta) cell.appendChild(cta.cloneNode(true));
+    if (titleEl) cell.appendChild(titleEl.cloneNode(true));
+    if (descEl) cell.appendChild(descEl.cloneNode(true));
+    if (btnEl) cell.appendChild(btnEl.cloneNode(true));
     return cell;
   }
-  const columnsRow = columnContainers.map(extractColumnContent);
-  // If only one column found, pad to two columns
-  while (columnsRow.length < 2) columnsRow.push('');
-
-  // Build the table
-  const cells = [
-    headerRow,
-    columnsRow
-  ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  
-  // Create wrapper to hold heading + table
-  const wrapper = document.createElement('div');
-  if (headingCell.hasChildNodes()) {
-    wrapper.appendChild(headingCell);
+  let columnsRow = [];
+  if (colContainers.length === 2) {
+    columnsRow = colContainers.map(extractColumnContent);
+  } else {
+    columnsRow = Array.from(element.querySelectorAll('.aem-GridColumn')).filter(
+      c => c.querySelector('.aem-Grid')
+    ).map(extractColumnContent);
   }
-  wrapper.appendChild(table);
-  
-  element.replaceWith(wrapper);
+
+  // Table: header row, then columns row
+  const headerRow = ['Columns (columns11)'];
+  const cells = [headerRow, columnsRow];
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }
