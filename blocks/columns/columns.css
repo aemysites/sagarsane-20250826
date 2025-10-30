@@ -16,7 +16,7 @@
 }
 
 .columns > div > .columns-img-col img {
-  display: block;
+   display: block;           /* ensures margin:auto centers it */
 }
 
 @media (width >= 900px) {
@@ -34,8 +34,9 @@
 
 
 .columns.columns20 {
-  background: #f4f4f4;
-  padding: 32px;
+  background: #F1F1F1;
+  /*padding: 32px;*/
+  padding-left: 100px;
   border-radius: 0;
   box-sizing: border-box;
 }
@@ -53,21 +54,21 @@
 }
 
 /* Left column: logo area as a compact green square */
-.columns.columns20 .columns-img-col {
+/*.columns.columns20 .columns-img-col {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   min-width: 56px;
   min-height: 56px;
   background: #7AC142;
-  border-radius: 8px;
+  *//*border-radius: 8px;*//*
   overflow: hidden;
   margin: 0;
   flex-shrink: 0;
   box-sizing: border-box;
-}
+}*/
 
 /* Logo sizing inside green square */
 .columns.columns20 .columns-img-col img {
@@ -131,4 +132,121 @@
   .columns.columns20 .columns-img-col {
     margin: 0 auto;
   }
+}
+
+
+/* ===== Base Section Style ===== */
+.section-3.columns-container {
+  background-color: #F1F1F1;
+  padding: 30px 20px;
+}
+
+/* ===== Columns layout ===== */
+.columns.columns20.block.columns-2-cols > div {
+  gap: 20px;*/
+  display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+/* ===== Image column styling (match nv-image) ===== */
+.columns.columns20.block.columns-2-cols .columns-img-col {
+   flex: 0 0 auto !important;
+     display: flex;
+     align-items: flex-start;
+     justify-content: flex-start;
+     max-width: fit-content !important;
+}
+
+.columns-img-col img {
+ display: block;
+  width: auto;
+  max-width: 100px;
+  height: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /*vertical-align: middle;*/
+}
+
+/* ===== Text column ===== */
+.columns.columns20.block.columns-2-cols > div > div:last-child {
+  flex: 1 1 auto !important;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.columns.columns20.block.columns-2-cols h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.columns.columns20.block.columns-2-cols p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== Responsive Behavior ===== */
+/*
+*//* Tablet: 640px–1023px *//*
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .columns-img-col img {
+    max-width: 80px; *//* same as AEM tablet rule *//*
+  }
+}
+
+*//* Mobile: up to 639px *//*
+@media screen and (max-width: 639px) {
+  .columns.columns20.block.columns-2-cols > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .columns-img-col img {
+    max-width: 70px; *//* same as nv-image mobile *//*
+  }
+  .columns.columns20.block.columns-2-cols > div > div:last-child {
+    text-align: center;
+  }
+}*/
+
+/*=================Style for Recommended For You Text============*/
+.default-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #1a1a1a; /* same as reference */
+  padding: 0 20px;
+}
+
+/* Heading style similar to reference page-title */
+.default-content-wrapper h2 {
+  color: #fff;
+  font-size: 1.75rem; /* adjust as needed */
+  margin: 0;
+  padding-top: 27px;
+}
+
+/* Anchor and image inside paragraph (icon button) */
+.default-content-wrapper p {
+  margin: 0;
+  padding: 0;
+}
+
+.default-content-wrapper a {
+  display: inline-block;
+  margin-left: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.default-content-wrapper img {
+  border: 0;
+  width: 25px;
+  padding-top: 32px;
+  padding-left: 10px;
 }
