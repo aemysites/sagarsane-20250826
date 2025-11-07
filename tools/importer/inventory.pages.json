@@ -1,7 +1,7 @@
 {
   "templates": [
     {
-      "name": "'video gallery page'",
+      "name": "'video content listing'",
       "cluster": 1,
       "pages": [
         {
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "name": "'Article page'",
+      "name": "'Text-heavy article page'",
       "cluster": 2,
       "pages": [
         {

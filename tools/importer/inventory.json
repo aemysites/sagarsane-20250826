@@ -127,6 +127,7 @@
     {
       "name": "unknown",
       "cluster": 3,
+      "key": "unknown3",
       "instances": [
         {
           "url": "https://www.nvidia.com/en-us/",
@@ -149,8 +150,7 @@
           "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]",
           "section": "section-4"
         }
-      ],
-      "key": "unknown3"
+      ]
     },
     {
       "name": "Columns",
@@ -282,6 +282,7 @@
     {
       "name": "unknown",
       "cluster": 12,
+      "key": "unknown12",
       "instances": [
         {
           "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/",
@@ -289,8 +290,7 @@
           "uuid": "b135541f-04-7fbf9f0eb64fa78247e2a7b7572f4c008eaee785",
           "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
         }
-      ],
-      "key": "unknown12"
+      ]
     },
     {
       "name": "Tabs",
