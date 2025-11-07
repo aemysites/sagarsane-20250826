@@ -1,44 +1,47 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as required
+  // Extract tab labels from desktop navigation
+  function getTabLabels() {
+    const navList = element.querySelector('.in-page-nav-displayed-list');
+    if (!navList) return [];
+    return Array.from(navList.querySelectorAll(':scope > li')).map(li => {
+      const link = li.querySelector('a');
+      return link ? link.textContent.trim() : '';
+    }).filter(Boolean);
+  }
+
+  // Extract CTA button text
+  function getCTAButtonText() {
+    const ctaCont = element.querySelector('.ip-nav-cta-cont');
+    if (!ctaCont) return '';
+    const btnText = ctaCont.querySelector('.btn-text');
+    if (btnText) {
+      return btnText.textContent.trim();
+    }
+    const btn = ctaCont.querySelector('a');
+    return btn ? btn.textContent.trim() : '';
+  }
+
+  // Build table rows
   const headerRow = ['Tabs (tabs14)'];
   const rows = [headerRow];
 
-  // Find all tab labels (desktop version)
-  const navList = element.querySelector('.in-page-nav-displayed-list');
-  let tabItems = [];
-  if (navList) {
-    tabItems = Array.from(navList.querySelectorAll('li'));
-  }
+  // Get tab labels
+  const tabLabels = getTabLabels();
+  // Get CTA button text
+  const ctaText = getCTAButtonText();
 
-  // Find the CTA button (Stay Informed)
-  let ctaButton = null;
-  const ctaContainer = element.querySelector('.ip-nav-cta-cont');
-  if (ctaContainer) {
-    ctaButton = ctaContainer.querySelector('a, button');
-  }
-
-  // For each tab, add a row: [Tab Label, Tab Content (link HTML)]
-  tabItems.forEach((li) => {
-    const link = li.querySelector('a');
-    let label = '';
-    let tabContent = '';
-    if (link) {
-      label = link.textContent.trim();
-      tabContent = link.outerHTML;
-    } else {
-      label = li.textContent.trim();
-      tabContent = '';
-    }
-    rows.push([label, tabContent]);
+  // For each tab, create a row: [label, content]
+  tabLabels.forEach(label => {
+    rows.push([label, '']);
   });
 
-  // Add CTA button as its own row at the end, if present
-  if (ctaButton) {
-    rows.push([ctaButton.textContent.trim(), ctaButton.outerHTML]);
+  // Add CTA button as a separate row if present
+  if (ctaText) {
+    rows.push(['CTA', ctaText]);
   }
 
-  // Create the table and replace the element
+  // Create table and replace element
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

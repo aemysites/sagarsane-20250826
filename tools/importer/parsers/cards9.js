@@ -1,66 +1,52 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Cards (cards9) block: 2 columns, multiple rows
-  // Header row
+  // Cards (cards9) block: 2 columns, multiple rows, first row is block name
   const headerRow = ['Cards (cards9)'];
   const rows = [headerRow];
 
-  // Find the container holding all cards
+  // Find the cards container
   const cardsContainer = element.querySelector('.nv-usecase--cards-container');
   if (!cardsContainer) return;
 
-  // Select all card elements inside the container
-  const cardEls = cardsContainer.querySelectorAll('.nv-usecase--card');
+  // Get all card elements
+  const cardElements = cardsContainer.querySelectorAll('.nv-usecase--card');
 
-  cardEls.forEach(cardEl => {
-    // --- IMAGE CELL ---
-    // Find the image (inside <figure><picture><img>)
-    let imgEl = null;
-    const figure = cardEl.querySelector('figure');
+  cardElements.forEach(card => {
+    // IMAGE CELL
+    // Find the image inside <picture> in <figure>
+    const figure = card.querySelector('figure');
+    let imageEl = null;
     if (figure) {
-      imgEl = figure.querySelector('img');
+      imageEl = figure.querySelector('img');
     }
 
-    // --- TEXT CELL ---
-    // Title (h4), subtitle (p), description (body-text), CTA (a), Image Credit (figcaption)
-    const inner = cardEl.querySelector('.nv-usecase--card-inner-container');
-    const textContent = [];
-    if (inner) {
-      // Title
-      const title = inner.querySelector('h4');
-      if (title) textContent.push(title);
-      // Subtitle
-      const subtitle = inner.querySelector('.nv-usecase--card-subtitle');
-      if (subtitle) textContent.push(subtitle);
-      // Description
-      const bodyTextWrapper = inner.querySelector('.nv-usecase--body-text-wrapper');
-      if (bodyTextWrapper) {
-        // Usually contains a <p>
-        const desc = bodyTextWrapper.querySelector('p');
-        if (desc) textContent.push(desc);
-      }
-      // CTA (button link)
-      const cta = inner.querySelector('.nv-button-standard a');
-      if (cta) textContent.push(cta);
-    }
-    // Image credit (figcaption) - wrap in a span for clarity
+    // TEXT CELL
+    const inner = card.querySelector('.nv-usecase--card-inner-container');
+    const textParts = [];
+    // Title (h4)
+    const title = inner && inner.querySelector('h4');
+    if (title) textParts.push(title);
+    // Subtitle (p)
+    const subtitle = inner && inner.querySelector('.nv-usecase--card-subtitle');
+    if (subtitle) textParts.push(subtitle);
+    // Body text
+    const bodyText = inner && inner.querySelector('.nv-usecase--body-text-wrapper p');
+    if (bodyText) textParts.push(bodyText);
+    // CTA link
+    const cta = inner && inner.querySelector('.nv-button-standard a');
+    if (cta) textParts.push(cta);
+    // Image credit (figcaption) -- always include, even if empty
     if (figure) {
       const credit = figure.querySelector('figcaption');
-      if (credit && credit.textContent.trim()) {
-        const creditSpan = document.createElement('span');
-        creditSpan.textContent = credit.textContent.trim();
-        creditSpan.className = 'image-credit';
-        textContent.push(creditSpan);
-      }
+      if (credit) textParts.push(credit);
     }
 
-    // Compose row: [image, text]
-    const row = [imgEl, textContent];
-    rows.push(row);
+    rows.push([
+      imageEl ? imageEl : '',
+      textParts.length ? textParts : ''
+    ]);
   });
 
-  // Create the table block
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  // Replace the original element
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }
