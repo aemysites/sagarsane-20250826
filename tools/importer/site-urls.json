@@ -238,7 +238,8 @@
       "id": "d6c75b61f09936dc1635bd1329909afd819dca45"
     },
     {
-      "url": "https://www.nvidia.com/en-us/geforce-now/",
+      "url": "https://www.nvidia.com/en-us/geforce-now/", 
+      "status": "EXCLUDED" ,
       "source": "CRAWL",
       "targetPath": "/en-us/geforce-now",
       "id": "43f479b18507155f4df37e0ac64da31cd5b1d673"
@@ -275,6 +276,7 @@
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/technologies/dlss/",
+      "status": "EXCLUDED",
       "source": "CRAWL",
       "targetPath": "/en-us/geforce/technologies/dlss",
       "id": "1f72aac881338a175135575d9444114829c9dd04"
