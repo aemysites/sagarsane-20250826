@@ -159,6 +159,7 @@ h2 {
 
 h3 {
   font-size: var(--heading-font-size-l);
+  font-weight: 700;
 }
 
 h4 {
@@ -281,6 +282,45 @@ main>.section:first-of-type {
   margin-top: 0;
 }
 
+.section.align-center .default-content-wrapper {
+  text-align: center ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-color-light {
+  background-color: #eeeeee;
+}
+
+.p-y-60{
+padding-block: 60px;
+margin: 0 !important;
+}
+
+.p-y-75{
+padding-block: 75px;
+margin: 0 !important;
+}
+
+.align-center-heading h1,
+.align-center-heading h2,
+.align-center-heading h3,
+.align-center-heading h4,
+.align-center-heading h5,
+.align-center-heading h6 {
+  text-align: center;
+}
+
+/* Paragraphs */
+.default-content-wrapper p {
+  margin: 10px 0;
+}
+
+.h1-large h1{
+  font-size: 28px;
+}
+
+
 @media (width>=900px) {
   main>.section>div {
     padding: 0 32px;
@@ -324,4 +364,136 @@ main .section.light, main .section.highlight {
 
 .section.section-7 {
   background: rgb(26 26 26) none no-repeat scroll 0% 0% / auto padding-box border-box;
+}
+
+.general-container {
+    max-width: 984px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+/* Hierarchical List Styling */
+ol {
+  counter-reset: item;
+  padding-left: 0;
+}
+
+ol > li {
+  display: block;
+  margin-bottom: 0.5em;
+  padding-left: 3em;
+  position: relative;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  width: 2.5em;
+}
+
+/* Nested list indentation */
+ol ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0;
+}
+
+ol ol > li {
+  padding-left: 3em;
+}
+
+ol ol ol > li {
+  padding-left: 3em;
+}
+
+/* Alternative approach for manual numbering (1.2, 1.2.1, etc.) */
+.hierarchical-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hierarchical-list li {
+  margin-bottom: 0.5em;
+  padding-left: 0;
+}
+
+.hierarchical-list .level-1 {
+  padding-left: 0;
+}
+
+.hierarchical-list .level-2 {
+  padding-left: 3em;
+}
+
+.hierarchical-list .level-3 {
+  padding-left: 5em;
+}
+
+.hierarchical-list .level-4 {
+  padding-left: 7em;
+}
+
+/* For content with manual numbering like 1.2, 1.2.1, etc. */
+.manual-numbering {
+  list-style: none;
+  padding-left: 0;
+}
+
+.manual-numbering li {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.manual-numbering li[data-level="1"] {
+  padding-left: 0;
+}
+
+.manual-numbering li[data-level="2"] {
+  padding-left: 3em;
+}
+
+.manual-numbering li[data-level="3"] {
+  padding-left: 5em;
+}
+
+.manual-numbering li[data-level="4"] {
+  padding-left: 7em;
+}
+
+/* Custom bullet style for unordered lists */
+ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5em;
+}
+
+ul li:before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+li a:any-link{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #76b900;
+    text-decoration-thickness: 2px;
+    text-underline-offset: .3125em;
+}
+
+li a:any-link:hover{
+    text-decoration-color: #000;
 }
