@@ -306,9 +306,9 @@ main .section.light, main .section.highlight {
   background: rgb(26 26 26) none repeat scroll 0% 0% / auto padding-box border-box;
 }
 
-.section.section-3 {
+/*.section.section-3 {
   background: rgb(241 241 241) none no-repeat scroll 0% 0% / auto padding-box border-box;
-}
+}*/
 
 .section.section-4 {
   background: rgb(255 255 255) none repeat scroll 0% 0% / auto padding-box border-box;

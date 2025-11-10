@@ -4,6 +4,7 @@
  * https://www.aem.live/developer/block-collection/fragment
  */
 
+/*
 import {
   decorateMain,
 } from '../../scripts/scripts.js';
@@ -11,13 +12,15 @@ import {
 import {
   loadSections,
 } from '../../scripts/aem.js';
+*/
+
 
 /**
  * Loads a fragment.
  * @param {string} path The path to the fragment
  * @returns {Promise<HTMLElement>} The root element of the fragment
  */
-export async function loadFragment(path) {
+/*export async function loadFragment(path) {
   if (path && path.startsWith('/')) {
     // eslint-disable-next-line no-param-reassign
     path = path.replace(/(\.plain)?\.html/, '');
@@ -41,9 +44,12 @@ export async function loadFragment(path) {
     }
   }
   return null;
-}
+}*/
+
+import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
+
   const link = block.querySelector('a');
   const path = link ? link.getAttribute('href') : block.textContent.trim();
   const fragment = await loadFragment(path);

@@ -1,9 +1,48 @@
 /* stylelint-disable no-empty-source */
 
+.horizontal-scroller {
+  background: #ffffff;
+}
 .horizontal-scroller .cards.h-cards {
-  background: #181818;
   padding: 32px 30px 0 0 !important;
 }
+
+.horizontal-scroller.block.cards-container {
+  display: flex;
+
+  overflow-x: auto;         /* Enables horizontal scrolling */
+
+  scroll-behavior: smooth;  /* Smooth scrolling */
+  gap: 20px;                /* Space between the wrappers */
+  padding-bottom: 10px;     /* A bit of space for scrollbar clearance */
+}
+
+/* Make first cards-wrapper bigger */
+.horizontal-scroller.block.cards-container .cards-wrapper:first-child {
+  flex: 0 0 500px; /* Adjust width — increase/decrease as needed */
+  max-width: 500px;
+}
+
+/* Keep the rest normal size */
+.horizontal-scroller.block.cards-container .cards-wrapper:not(:first-child) {
+  flex: 0 0 350px; /* Adjust if needed */
+}
+
+
+.cards-wrapper {
+ /* flex: 0 0 auto;    */       /* Prevent shrinking; keep width based on content */
+ /* min-width: 400px;*/         /* Adjust width as desired */
+  scroll-snap-align: start; /* Optional: helps snap into place if you add scroll snapping */
+}
+.section.section-3.horizontal-scroller-container.horizontal-scroller-wrapper {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.horizontal-scroller-container .default-content-wrapper {
+  background-color: #ffffff;
+}
+/*==========Style for Cards with image =========*/
 .cards.h-cards ul {
   display: flex;
   flex-flow: row nowrap;
@@ -30,7 +69,7 @@
   overflow: hidden;
   flex: 0 0 300px;
   margin: 0;
-  padding-bottom: 60px;
+  /*padding-bottom: 60px;*/
 }
 
 .cards.h-cards .cards-card-image {
@@ -62,3 +101,74 @@
   box-sizing: border-box;
 }
 
+.cards.h-text .cards-card-body p:first-child{
+font-size: 22px;
+line-height: 1.75em;
+}
+
+.cards.h-text .cards-card-body p:nth-of-type(2){
+font-weight: 700;
+cursor: pointer;
+    font-size: 18px;
+        padding-bottom: 10px !important;
+        padding-top: 0 !important;
+}
+
+/* Horizontal layout for "Quick Links" list */
+.cards.h-text.block ul ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px 20px; /* spacing between list items */
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.cards.h-text.block ul ul li {
+  /*white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;*/
+
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+      text-wrap: balance;
+      align-items: center;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25em;
+      padding-right: 20px;
+      position: relative;
+      text-decoration: none;
+}
+/* Quick link anchor style */
+.cards.h-text.block ul ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+.cards.h-text.block ul ul li a:hover {
+  color: #000000; /* stays black even on hover */
+}
+
+.cards.h-text.block ul ul li .icon {
+   display: inline-flex;
+   align-items: center; /* centers icon vertically */
+   justify-content: center;
+   height: auto;
+   transform: translateY(1px);
+}
+
+.cards.h-text.block ul ul li .icon .icon-angle-right img{
+ transition: 0.2s ease-out;
+ filter: brightness(0) saturate(100%);
+
+}
+.cards.h-text.block ul ul li .icon .icon-angle-right img:hover{
+ transition: 0.2s ease-out;
+filter: brightness(0) saturate(100%) invert(40%);
+
+}
