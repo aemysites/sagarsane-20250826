@@ -1,83 +1,218 @@
-.agreement-header-container {
-  background-color: #2d2d2d;
+/* ============================================================
+   BASE — MOBILE FIRST (Default ≤ 768px)
+============================================================ */
+
+body {
+  margin: 0;
   padding: 0;
+  scroll-padding-top: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
+main .section.agreement-header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000;
   width: 100%;
+  min-height: 50px;
+
+  /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
-.agreement-header-wrapper {
-  max-width: 1200px;
+/* Wrapper (centered content, NOT the dropdown anchor) */
+main .section .agreement-header-wrapper {
+  width: 100%;
+  max-width: 954px;
   margin: 0 auto;
-  padding: 24px 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
+/* Header block layout */
 .agreement-header-block {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
-.agreement-header-block > div {
+
+/* ============================================================
+   LEFT SIDE — MOBILE VERSION
+============================================================ */
+
+.agreement-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop label hidden on mobile */
+.agreement-desktop {
+  display: none;
+}
+
+/* MOBILE TOGGLE */
+.agreement-mobile-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 8px;
+  padding: 0;
 }
 
-.agreement-title {
-  color: #ffffff;
-  font-size: 32px;
-  font-weight: 400;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  flex: 1;
+/* Arrow animation */
+.agreement-mobile-toggle .arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
 }
 
-.agreement-link {
-  flex-shrink: 0;
+.agreement-mobile-toggle.expanded .arrow {
+  transform: rotate(180deg);
 }
 
-.agreement-link a {
-  background-color: #76b900 !important;
-  color: #ffffff !important;
-  padding: 12px 24px;
+
+/* ============================================================
+   MOBILE DROPDOWN PANEL
+   (THIS NOW ANCHORS TO THE FULL BLACK HEADER)
+============================================================ */
+
+.agreement-dropdown {
+  display: none;
+  background: #404040;
+
+  /* FULL-WIDTH FIX — anchored to the full header */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 16px 0;
+  z-index: 2000;
+}
+
+.agreement-dropdown.open {
+  display: block;
+}
+
+.agreement-dropdown .dropdown-item {
+  color: #76b900;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  border: none;
+  font-weight: 500;
+  display: block;
+  padding: 8px 20px;
 }
 
-.agreement-link a:hover {
-  background-color: #5a8a00 !important;
+.agreement-dropdown .dropdown-item:hover {
+  color: #8bc34a;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+
+/* ============================================================
+   RIGHT SIDE — PDF BUTTON
+============================================================ */
+
+.agreement-right a.button.primary {
+  background: #76b900;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: background-color 0.25s ease-out;
+}
+
+.agreement-right a.button.primary:hover {
+  background: #91c733;
+}
+
+
+
+/* ============================================================
+   TABLET ≥ 768px
+============================================================ */
+@media (min-width: 768px) {
+
+  body {
+    scroll-padding-top: 60px;
+  }
+
+  main .section.agreement-header-container {
+    min-height: 60px;
+  }
+
+  /* Desktop text shows */
+  .agreement-desktop {
+    display: block;
+  }
+
+  /* Hide mobile toggle + dropdown */
+  .agreement-mobile-toggle,
+  .agreement-dropdown {
+    display: none !important;
+  }
+
+  .agreement-desktop a.button.secondary {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    background: none;
+    border: none;
+  }
+
+  .agreement-right a.button.primary {
+    font-size: 17px;
+    padding: 12px 20px;
+    min-width: 130px;
+  }
+}
+
+
+
+/* ============================================================
+   DESKTOP ≥ 1024px
+============================================================ */
+@media (min-width: 1024px) {
+
+  body {
+    scroll-padding-top: 70px;
+  }
+
+  main .section.agreement-header-container {
+    height: 70px;
+  }
+
   .agreement-header-wrapper {
-    padding: 16px 20px;
+    padding: 0 40px;
   }
-  
-  .agreement-header-block {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  
-  .agreement-title {
+
+  .agreement-desktop a.button.secondary {
     font-size: 24px;
   }
-  
-  .agreement-link {
-    margin-left: 0;
-    align-self: stretch;
-  }
-  
-  .agreement-link a {
-    display: block;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+
+  .agreement-right a.button.primary {
+    font-size: 18px;
+    padding: 13px 24px;
+    height: 45px;
+    min-width: 140px;
   }
 }
