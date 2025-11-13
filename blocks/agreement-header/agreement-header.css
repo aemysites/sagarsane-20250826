@@ -16,7 +16,7 @@ main .section.agreement-header-container {
   z-index: 1000;
   background: #000;
   width: 100%;
-  min-height: 50px;
+  max-height: 45px;
 
   /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
 
@@ -31,7 +31,6 @@ main .section .agreement-header-wrapper {
   width: 100%;
   max-width: 954px;
   margin: 0 auto;
-  padding: 0 15px;
   box-sizing: border-box;
 }
 
@@ -130,14 +129,16 @@ main .section .agreement-header-wrapper {
 .agreement-right a.button.primary {
   background: #76b900;
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  padding: 10px 16px;
   text-decoration: none;
   display: flex;
   align-items: center;
   border-radius: 4px;
   transition: background-color 0.25s ease-out;
+  border-radius: 0;
+  margin: 0;
+  padding: 9px 11px;
 }
 
 .agreement-right a.button.primary:hover {
@@ -198,7 +199,8 @@ main .section .agreement-header-wrapper {
   }
 
   main .section.agreement-header-container {
-    height: 70px;
+    height: 100%;
+    max-height: 70px;
   }
 
   .agreement-header-wrapper {
@@ -210,7 +212,7 @@ main .section .agreement-header-wrapper {
   }
 
   .agreement-right a.button.primary {
-    font-size: 18px;
+    font-size: 16px;
     padding: 13px 24px;
     height: 45px;
     min-width: 140px;
