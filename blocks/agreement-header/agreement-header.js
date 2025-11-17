@@ -1,3 +1,5 @@
+import { decorateIcons } from '../../scripts/aem.js';
+
 export default function decorate(block) {
   // Extract the two anchor buttons from authoring
   const links = block.querySelectorAll('a.button');
@@ -34,10 +36,7 @@ export default function decorate(block) {
   mobileToggle.className = 'agreement-mobile-toggle';
   mobileToggle.innerHTML = `
     <span class="text">${agreementsBtn.textContent}</span>
-    <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
-      <path d="M1 1L6 6L11 1" stroke="white" stroke-width="2" 
-      stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
+    <span class="icon icon-arrow-down"></span>
   `;
   mobileRow.appendChild(mobileToggle);
 
@@ -73,6 +72,9 @@ export default function decorate(block) {
   // Inject into the block
   block.textContent = '';
   block.appendChild(wrapper);
+
+  // Decorate icons after DOM is built
+  decorateIcons(block);
 
   // --- MOBILE DROPDOWN LOGIC ---
   mobileToggle.addEventListener('click', () => {

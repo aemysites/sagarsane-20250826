@@ -79,12 +79,14 @@ main .section .agreement-header-wrapper {
 }
 
 /* Arrow animation */
-.agreement-mobile-toggle .arrow {
+.agreement-mobile-toggle .icon {
   transition: transform 0.3s ease;
   transform: rotate(0deg);
+  width: 12px;
+  filter: invert(1);
 }
 
-.agreement-mobile-toggle.expanded .arrow {
+.agreement-mobile-toggle.expanded .icon {
   transform: rotate(180deg);
 }
 
