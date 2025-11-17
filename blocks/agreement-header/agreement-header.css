@@ -6,16 +6,23 @@ body {
   margin: 0;
   padding: 0;
   scroll-padding-top: 50px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  /* Prevent iOS Safari scroll bounce that can break sticky */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
+
+
 
 /* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
 main .section.agreement-header-container {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
   background: #000;
   width: 100%;
+  height: 45px;
+  min-height: 45px;
   max-height: 45px;
 
   /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
@@ -218,4 +225,3 @@ main .section .agreement-header-wrapper {
     min-width: 140px;
   }
 }
-

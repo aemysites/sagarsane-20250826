@@ -11,9 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-html, body {
-  overflow-x: hidden;
+/* Franklin adds margin/padding to the first section, which breaks mobile sticky.
+   This forces the sticky header to start exactly at scroll position 0. */
+main > .section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
+
 
 *,
 *::before,
