@@ -41,7 +41,28 @@
 
 .horizontal-scroller-container .default-content-wrapper {
   background-color: #ffffff;
+  display: flex;
+      align-items: center;
+      justify-content: space-between;
 }
+
+.cards.h-cards li {
+  position: relative;
+}
+
+.cards.h-cards li .card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: block;
+  text-decoration: none;
+  color: transparent;
+}
+
+.cards.h-cards li:hover {
+  cursor: pointer;
+}
+
 /*==========Style for Cards with image =========*/
 .cards.h-cards ul {
   display: flex;
@@ -58,7 +79,7 @@
 
 .cards.h-cards li {
   background: transparent;
-  border-radius: 4px;
+
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   display: flex;
   flex-direction: column;
@@ -67,9 +88,16 @@
   width: 100%;
   /*height: 400px;*/
   overflow: hidden;
-  flex: 0 0 300px;
+  flex: 0 0 410px;
   margin: 0;
   /*padding-bottom: 60px;*/
+  border-radius: 2px;
+      -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+      -webkit-transition: -webkit-box-shadow .5s;
+      transition: -webkit-box-shadow .5s;
+      transition: box-shadow .5s;
+      transition: box-shadow .5s, -webkit-box-shadow .5s;
 }
 
 .cards.h-cards .cards-card-image {
@@ -92,7 +120,7 @@
 
 .cards.h-cards .cards-card-body {
   background: #fff;
-  padding: 16px;
+  /*padding: 16px;*/
   display: flex;
   flex-direction: column;
   /*flex: 1 1 auto;*/
@@ -104,6 +132,30 @@
 .cards.h-text .cards-card-body p:first-child{
 font-size: 22px;
 line-height: 1.75em;
+}
+
+.cards.h-cards .cards-card-body:nth-of-type(2){
+    padding: 0px 20px;
+    width: calc(100% - 40px);
+}
+
+.cards.h-cards .cards-card-body:nth-of-type(2) p:first-child {
+   margin: 30px 0;
+       font-size: 15px;
+       font-weight: 700;
+       padding-bottom: 0;
+       padding-top: 0;
+}
+.cards.h-cards .cards-card-body:nth-of-type(2) p:nth-of-type(2) {
+       margin: 30px 0;
+       font-size: 18px;
+       font-weight: 700;
+       padding-bottom: 0;
+       padding-top: 0;
+       font-weight: 700;
+       line-height: 1.25em;
+       margin-block-end: 0;
+       margin-block-start: 0;
 }
 
 .cards.h-text .cards-card-body p:nth-of-type(2){
@@ -123,23 +175,18 @@ cursor: pointer;
   gap: 10px 20px; /* spacing between list items */
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .cards.h-text.block ul ul li {
-  /*white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 4px;*/
-
-  -webkit-box-align: center;
+ -webkit-box-align: center;
       -ms-flex-align: center;
       text-wrap: balance;
       align-items: center;
       display: inline-block;
       font-size: 18px;
       font-weight: 700;
-      line-height: 1.25em;
+      line-height: 3.25em;
       padding-right: 20px;
       position: relative;
       text-decoration: none;
@@ -148,7 +195,7 @@ cursor: pointer;
 .cards.h-text.block ul ul li a {
   text-decoration: none;
   color: #000000;
-  font-weight: 500;
+  font-weight: 700;
 }
 .cards.h-text.block ul ul li a:hover {
   color: #000000; /* stays black even on hover */
@@ -159,7 +206,7 @@ cursor: pointer;
    align-items: center; /* centers icon vertically */
    justify-content: center;
    height: auto;
-   transform: translateY(1px);
+   transform: translateY(3px);
 }
 
 .cards.h-text.block ul ul li .icon .icon-angle-right img{
@@ -171,4 +218,128 @@ cursor: pointer;
  transition: 0.2s ease-out;
 filter: brightness(0) saturate(100%) invert(40%);
 
+}
+
+/* Target only this specific scroller */
+.horizontal-scroller.block.cards-container {
+  scrollbar-width: thin;             /* Firefox */
+  scrollbar-color: #76b900 transparent; /* thumb color | track color */
+}
+
+/* For Chrome, Edge, and Safari */
+.horizontal-scroller.block.cards-container::-webkit-scrollbar {
+  height: 8px; /* since it's horizontal */
+}
+
+.horizontal-scroller.block.cards-container::-webkit-scrollbar-track {
+  background: transparent; /* or use #f0f0f0 if you want a visible track */
+}
+
+.horizontal-scroller.block.cards-container::-webkit-scrollbar-thumb {
+  background-color: #76b900; /* NVIDIA green */
+  border-radius: 10px;
+}
+
+.horizontal-scroller.block.cards-container::-webkit-scrollbar-thumb:hover {
+  background-color: #5a8a00; /* darker on hover */
+}
+
+/* remove all default link styles inside your card */
+.cards.h-cards.block .card-link-wrapper:any-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;      /* inherit text color from parent */
+  cursor: pointer;
+}
+
+/* make sure inner <p> or headings keep their normal color */
+.cards.h-cards.block .card-link-wrapper p,
+.cards.h-cards.block .card-link-wrapper h1,
+.cards.h-cards.block .card-link-wrapper h2,
+.cards.h-cards.block .card-link-wrapper h3,
+.cards.h-cards.block .card-link-wrapper h4,
+.cards.h-cards.block .card-link-wrapper h5,
+.cards.h-cards.block .card-link-wrapper h6 {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* optional hover feedback */
+.cards.h-cards.block .card-link-wrapper:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
+/*======Quick Links=========*/
+/* Hide angle-up and ul by default */
+.cards.h-text.block .icon-angle-up{
+  display: none;
+}
+
+.cards.h-text.block .cards-card-body p + ul {
+  display: none;
+}
+
+/*==========Scroll button ============*/
+.default-content-wrapper .icon {
+  background-color: #76b900;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-family: var(--awesome-font);
+  font-size: 1pc;
+  font-weight: 700;
+  height: 35px;
+  width: 30px;
+  display: inline-flex;           /* Centers icon nicely */
+  align-items: center;
+  justify-content: center;            /* Optional: smooth corners */
+  transition: 0.4s ease-out;
+  margin-right:10px;
+}
+
+.horizontal-scroller-container .default-content-wrapper .icon img {
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+}
+
+.horizontal-scroller-container .default-content-wrapper .icon:hover {
+  background-color: #5a8d00;
+  transform: scale(1.05);
+}
+
+/*===========Media Query for Mobile=============*/
+@media (max-width: 1023px) {
+  .cards.h-text .cards-card-body p:first-child{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards.h-text .cards-card-body p:nth-of-type(2) ul{
+    font-size: 15px;
+    font-weight: 400px;
+  }
+}
+
+@media (max-width: 639px) {
+    .cards.h-text {
+        text-align: left;
+    }
+}
+
+@media (width <= 600px) {
+.horizontal-scroller-container .default-content-wrapper .icon-chevron-right{
+display :  none !important;
+}
+.horizontal-scroller-container .default-content-wrapper .icon-chevron-left{
+display : none !important;
+}
+
+.cards.h-text .cards-card-body p:first-child{
+    font-size: 18px;
+  }
 }
