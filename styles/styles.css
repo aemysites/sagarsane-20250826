@@ -427,15 +427,6 @@ ol>li {
   line-height: 1.6;
 }
 
-ol>li::before {
-  content: counter(section) ". ";
-  position: absolute;
-  left: 0;
-  width: 2.5em;
-  font-weight: normal;
-  color: inherit;
-}
-
 /* ---------- UNORDERED LISTS (BULLETS) ---------- */
 ul {
   list-style: none;
@@ -456,6 +447,15 @@ ul li::before {
   left: 0;
   font-weight: bold;
   color: var(--text-color);
+}
+
+ol>li::before {
+  content: counter(section) ". ";
+  position: absolute;
+  left: 0;
+  width: 2.5em;
+  font-weight: normal;
+  color: inherit;
 }
 
 /* Nested unordered lists */
