@@ -4,7 +4,7 @@ const path = require('path');
 const projectType = process.argv[2];
 
 if (!projectType || !['doc', 'xwalk', 'da'].includes(projectType)) {
-  //console.error('Please specify project type: "doc" or "xwalk" or "da"');
+  // console.error('Please specify project type: "doc" or "xwalk" or "da"');
   process.exit(1);
 }
 
@@ -12,7 +12,7 @@ if (!projectType || !['doc', 'xwalk', 'da'].includes(projectType)) {
 function deleteDirectory(dirPath) {
   if (fs.existsSync(dirPath)) {
     fs.rmSync(dirPath, { recursive: true, force: true });
-    //console.log(`Deleted directory: ${dirPath}`);
+    // console.log(`Deleted directory: ${dirPath}`);
   }
 }
 
@@ -20,7 +20,7 @@ function deleteDirectory(dirPath) {
 function deleteFile(filePath) {
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
-    //console.log(`Deleted file: ${filePath}`);
+    // console.log(`Deleted file: ${filePath}`);
   }
 }
 
@@ -28,7 +28,7 @@ function deleteFile(filePath) {
 function copyFile(source, target) {
   if (fs.existsSync(source)) {
     fs.copyFileSync(source, target);
-    //console.log(`Copied ${source} to ${target}`);
+    // console.log(`Copied ${source} to ${target}`);
   }
 }
 
@@ -74,7 +74,7 @@ function cleanUpXwalkContent() {
           const filteredLines = lines.filter((line) => !line.includes('moveInstrumentation'));
           if (lines.length !== filteredLines.length) {
             fs.writeFileSync(fullPath, filteredLines.join('\n'));
-            //console.log(`Removed moveInstrumentation lines from ${fullPath}`);
+            // console.log(`Removed moveInstrumentation lines from ${fullPath}`);
           }
         }
       });
@@ -100,7 +100,7 @@ function cleanUpXwalkContent() {
       }
     });
     fs.writeFileSync(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
-    //console.log('Removed build:json scripts from package.json');
+    // console.log('Removed build:json scripts from package.json');
   }
 }
 
@@ -120,4 +120,4 @@ if (projectType === 'da') {
 // Delete this script
 deleteFile(__filename);
 
-//console.log(`Setup completed for ${projectType} project type.`);
+// console.log(`Setup completed for ${projectType} project type.`);
