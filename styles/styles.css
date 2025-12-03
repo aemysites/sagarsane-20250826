@@ -284,6 +284,10 @@ main img {
 }
 
 /* sections */
+main>.section:first-of-type {
+  margin-top: 0;
+}
+
 main>.section {
   margin: 40px 0;
 }
@@ -294,10 +298,6 @@ main>.section>div {
   padding: 0 24px;
 }
 
-main>.section:first-of-type {
-  margin-top: 0;
-}
-
 .section.align-center .default-content-wrapper {
   text-align: center ;
   margin-left: auto;
@@ -305,7 +305,7 @@ main>.section:first-of-type {
 }
 
 .bg-color-light {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .section.p-y-60 {
@@ -433,7 +433,7 @@ ol>li {
   line-height: 1.6;
 }
 
-ol>li:before {
+ol>li::before {
   content: counter(section) ". ";
   position: absolute;
   left: 0;
@@ -455,7 +455,7 @@ ol>li>ol>li {
   counter-increment: subsection;
 }
 
-ol>li>ol>li:before {
+ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) " ";
   position: absolute;
   left: 0;
@@ -476,7 +476,7 @@ ol>li>ol>li>ol>li {
   margin-bottom: 0.5em;
 }
 
-ol>li>ol>li>ol>li:before {
+ol>li>ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
   position: absolute;
   left: 0;
@@ -497,7 +497,7 @@ ul li {
   line-height: 1.6;
 }
 
-ul li:before {
+ul li::before {
   content: ">";
   position: absolute;
   left: 0;
@@ -511,7 +511,7 @@ ul ul {
   padding-left: 18px;
 }
 
-ul ul li:before {
+ul ul li::before {
   content: "›";
   color: #76b900;
 }
@@ -535,8 +535,4 @@ ul ul li:before {
 main .section.general-container > div {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.section.p-y-75 {
-  padding-block: 45px;
 }
