@@ -12,23 +12,21 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 import columns4Parser from './parsers/columns4.js';
-import columns5Parser from './parsers/columns5.js';
-import cards6Parser from './parsers/cards6.js';
-import hero7Parser from './parsers/hero7.js';
 import cards2Parser from './parsers/cards2.js';
+import columns5Parser from './parsers/columns5.js';
+import hero7Parser from './parsers/hero7.js';
+import cards6Parser from './parsers/cards6.js';
+import cards10Parser from './parsers/cards10.js';
 import cards8Parser from './parsers/cards8.js';
 import cards9Parser from './parsers/cards9.js';
-import cards10Parser from './parsers/cards10.js';
 import columns11Parser from './parsers/columns11.js';
-import cards1Parser from './parsers/cards1.js';
-import tabs13Parser from './parsers/tabs13.js';
-import columns16Parser from './parsers/columns16.js';
 import cards15Parser from './parsers/cards15.js';
 import tabs14Parser from './parsers/tabs14.js';
+import columns16Parser from './parsers/columns16.js';
 import hero17Parser from './parsers/hero17.js';
 import columns21Parser from './parsers/columns21.js';
-import columns20Parser from './parsers/columns20.js';
 import cardsNoImages19Parser from './parsers/cardsNoImages19.js';
+import columns20Parser from './parsers/columns20.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
@@ -46,23 +44,21 @@ import {
 const parsers = {
   metadata: metadataParser,
   columns4: columns4Parser,
-  columns5: columns5Parser,
-  cards6: cards6Parser,
-  hero7: hero7Parser,
   cards2: cards2Parser,
+  columns5: columns5Parser,
+  hero7: hero7Parser,
+  cards6: cards6Parser,
+  cards10: cards10Parser,
   cards8: cards8Parser,
   cards9: cards9Parser,
-  cards10: cards10Parser,
   columns11: columns11Parser,
-  cards1: cards1Parser,
-  tabs13: tabs13Parser,
-  columns16: columns16Parser,
   cards15: cards15Parser,
   tabs14: tabs14Parser,
+  columns16: columns16Parser,
   hero17: hero17Parser,
   columns21: columns21Parser,
-  columns20: columns20Parser,
   cardsNoImages19: cardsNoImages19Parser,
+  columns20: columns20Parser,
   ...customParsers,
 };
 
