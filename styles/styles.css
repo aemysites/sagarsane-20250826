@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -289,22 +288,10 @@ main img {
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
-/* sections */
-main>.section {
-  margin: 40px 0;
-}
->>>>>>> parent of b4f724b (resolving lint errors)
-
 main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
-}
-
-main>.section:first-of-type {
-  margin-top: 0;
 }
 
 .section.align-center .default-content-wrapper {
@@ -314,7 +301,7 @@ main>.section:first-of-type {
 }
 
 .bg-color-light {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .section.p-y-60 {
@@ -355,7 +342,6 @@ ol li{
 .h2-small h2{
   font-size: 18px;
 }
-
 
 @media (width>=900px) {
   main>.section>div {
@@ -425,6 +411,38 @@ main .section.light, main .section.highlight {
   width: 100%;
 }
 
+/* ---------- UNORDERED LISTS (BULLETS) ---------- */
+ul {
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 10px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Nested unordered lists */
+ul ul {
+  margin-top: 0.5em;
+  padding-left: 18px;
+}
+
+ul ul li::before {
+  content: "›";
+  color: #76b900;
+}
 
 /* ---------- ORDERED LISTS (NUMBERS) ---------- */
 ol {
@@ -442,7 +460,7 @@ ol>li {
   line-height: 1.6;
 }
 
-ol>li:before {
+ol>li::before {
   content: counter(section) ". ";
   position: absolute;
   left: 0;
@@ -456,8 +474,6 @@ ol>li>ol {
   counter-reset: subsection;
   margin: 0.5em 0;
   padding-left: 0;
-<<<<<<< HEAD
-=======
 }
 
 ol>li>ol>li {
@@ -466,7 +482,7 @@ ol>li>ol>li {
   counter-increment: subsection;
 }
 
-ol>li>ol>li:before {
+ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) " ";
   position: absolute;
   left: 0;
@@ -487,45 +503,11 @@ ol>li>ol>li>ol>li {
   margin-bottom: 0.5em;
 }
 
-ol>li>ol>li>ol>li:before {
+ol>li>ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
   position: absolute;
->>>>>>> parent of b4f724b (resolving lint errors)
   left: 0;
   width: 4.2em;
-}
-
-/* ---------- UNORDERED LISTS (BULLETS) ---------- */
-ul {
-  list-style: none;
-  margin: 1em 0;
-  padding-left: 10px;
-}
-
-ul li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-}
-
-ul li:before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-/* Nested unordered lists */
-ul ul {
-  margin-top: 0.5em;
-  padding-left: 18px;
-}
-
-ul ul li:before {
-  content: "›";
-  color: #76b900;
 }
 
 /* ---------------- AGREEMENT CONTEXT LINKS ---------------- */
@@ -543,12 +525,7 @@ ul ul li:before {
   text-decoration-color: #000;
 }
 
-
 main .section.general-container > div {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.section.p-y-75 {
-  padding-block: 45px;
 }
