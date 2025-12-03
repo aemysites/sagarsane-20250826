@@ -1,0 +1,225 @@
+/* ============================================================
+   BASE — MOBILE FIRST (Default ≤ 768px)
+============================================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 50px;
+
+  /* Prevent iOS Safari scroll bounce that can break sticky */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+
+
+/* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
+main .section.agreement-header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000;
+  width: 100%;
+  height: 45px;
+  min-height: 45px;
+  max-height: 45px;
+
+  /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Wrapper (centered content, NOT the dropdown anchor) */
+main .section .agreement-header-wrapper {
+  width: 100%;
+  max-width: 954px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header block layout */
+.agreement-header-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ============================================================
+   LEFT SIDE — MOBILE VERSION
+============================================================ */
+
+.agreement-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop label hidden on mobile */
+.agreement-desktop {
+  display: none;
+}
+
+/* MOBILE TOGGLE */
+.agreement-mobile-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+/* Arrow animation */
+.agreement-mobile-toggle .icon {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+  width: 12px;
+  filter: invert(1);
+}
+
+.agreement-mobile-toggle.expanded .icon {
+  transform: rotate(180deg);
+}
+
+
+/* ============================================================
+   MOBILE DROPDOWN PANEL
+   (THIS NOW ANCHORS TO THE FULL BLACK HEADER)
+============================================================ */
+
+.agreement-dropdown {
+  display: none;
+  background: #404040;
+
+  /* FULL-WIDTH FIX — anchored to the full header */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 16px 0;
+  z-index: 2000;
+}
+
+.agreement-dropdown.open {
+  display: block;
+}
+
+.agreement-dropdown .dropdown-item {
+  color: #76b900;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 8px 20px;
+}
+
+.agreement-dropdown .dropdown-item:hover {
+  color: #8bc34a;
+}
+
+
+/* ============================================================
+   RIGHT SIDE — PDF BUTTON
+============================================================ */
+
+.agreement-right a.button.primary {
+  background: #76b900;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.25s ease-out;
+  border-radius: 0;
+  margin: 0;
+  padding: 9px 11px;
+}
+
+.agreement-right a.button.primary:hover {
+  background: #91c733;
+}
+
+
+
+/* ============================================================
+   TABLET ≥ 768px
+============================================================ */
+@media (width >= 768px) {
+  body {
+    scroll-padding-top: 60px;
+  }
+
+  main .section.agreement-header-container {
+    min-height: 60px;
+  }
+
+  /* Desktop text shows */
+  .agreement-desktop {
+    display: block;
+  }
+
+  /* Hide mobile toggle + dropdown */
+  .agreement-mobile-toggle,
+  .agreement-dropdown {
+    display: none !important;
+  }
+
+  .agreement-desktop a.button.secondary {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    background: none;
+    border: none;
+  }
+
+  .agreement-right a.button.primary {
+    font-size: 17px;
+    padding: 12px 20px;
+    min-width: 130px;
+  }
+}
+
+
+
+/* ============================================================
+   DESKTOP ≥ 1024px
+============================================================ */
+@media (width >= 1024px) {
+  body {
+    scroll-padding-top: 70px;
+  }
+
+  main .section.agreement-header-container {
+    height: 100%;
+    max-height: 70px;
+  }
+
+  .agreement-header-wrapper {
+    padding: 0 40px;
+  }
+
+  .agreement-desktop a.button.secondary {
+    font-size: 24px;
+  }
+
+  .agreement-right a.button.primary {
+    font-size: 16px;
+    padding: 13px 24px;
+    height: 45px;
+    min-width: 140px;
+  }
+}
