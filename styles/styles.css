@@ -441,14 +441,6 @@ ul li {
   line-height: 1.6;
 }
 
-ul li::before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
 ol>li::before {
   content: counter(section) ". ";
   position: absolute;
@@ -456,6 +448,14 @@ ol>li::before {
   width: 2.5em;
   font-weight: normal;
   color: inherit;
+}
+
+ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 /* Nested unordered lists */
