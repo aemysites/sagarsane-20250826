@@ -107,7 +107,6 @@ main .section .agreement-header-wrapper {
   width: auto;
   max-width: 100%;
   box-sizing: border-box;
-
   padding: 16px 0;
   z-index: 2000;
 }

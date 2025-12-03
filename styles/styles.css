@@ -11,6 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
+/* sections */
+
+main>.section {
+  margin: 40px 0;
+}
+
 /* Franklin adds margin/padding to the first section, which breaks mobile sticky.
    This forces the sticky header to start exactly at scroll position 0. */
 main > .section:first-of-type {
@@ -283,14 +289,6 @@ main img {
   width: 100%;
 }
 
-/* sections */
-main>.section:first-of-type {
-  margin-top: 0;
-}
-
-main>.section {
-  margin: 40px 0;
-}
 
 main>.section>div {
   max-width: 1200px;
@@ -447,38 +445,6 @@ ol>li>ol {
   counter-reset: subsection;
   margin: 0.5em 0;
   padding-left: 0;
-}
-
-ol>li>ol>li {
-  position: relative;
-  padding-left: 3em;
-  counter-increment: subsection;
-}
-
-ol>li>ol>li::before {
-  content: counter(section) "." counter(subsection) " ";
-  position: absolute;
-  left: 0;
-  width: 2.8em;
-}
-
-/* Level 3 */
-ol>li>ol>li>ol {
-  counter-reset: subsubsection;
-  margin: 0.5em 0;
-  padding-left: 0;
-}
-
-ol>li>ol>li>ol>li {
-  position: relative;
-  padding-left: 3.2em;
-  counter-increment: subsubsection;
-  margin-bottom: 0.5em;
-}
-
-ol>li>ol>li>ol>li::before {
-  content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
-  position: absolute;
   left: 0;
   width: 4.2em;
 }
