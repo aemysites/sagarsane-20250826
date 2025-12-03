@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -32,7 +33,6 @@
   padding: 48px 0;
 }
 
-/* Horizontal card row: side-by-side, no wrapping by default */
 .cards.cards15 ul {
   display: flex;
   flex-flow: row nowrap;
@@ -46,7 +46,6 @@
   box-sizing: border-box;
 }
 
-/* Card container */
 .cards.cards15 li {
   background: transparent;
   border-radius: 4px;
@@ -62,7 +61,6 @@
   margin: 0;
 }
 
-/* Card image section */
 .cards.cards15 .cards-card-image {
   width: 100%;
   aspect-ratio: 5 / 3;
@@ -81,7 +79,6 @@
   display: block;
 }
 
-/* Card body (text section) */
 .cards.cards15 .cards-card-body {
   background: #fff;
   padding: 16px;
@@ -93,7 +90,6 @@
   box-sizing: border-box;
 }
 
-/* Meta text (first paragraph) */
 .cards.cards15 .cards-card-body p:first-child {
   color: #222;
   font-size: 12px;
@@ -104,7 +100,6 @@
   line-height: 1.2;
 }
 
-/* Title link styles */
 .cards.cards15 .cards-card-body .button-container a.button {
   color: #000;
   font-size: 16px;
@@ -123,7 +118,6 @@
   max-width: 100%;
 }
 
-/* Remove default button styling, only underline on hover/focus */
 .cards.cards15 .cards-card-body .button-container a.button:hover,
 .cards.cards15 .cards-card-body .button-container a.button:focus {
   color: #000;
@@ -133,7 +127,6 @@
   border: none;
 }
 
-/* Responsive adjustments */
 @media (width <= 900px) {
   .cards.cards15 ul {
     gap: 12px;
@@ -163,5 +156,211 @@
 
   .cards.cards15 {
     padding: 24px 0;
+  }
+}
+
+
+.cards.cards1 {
+  background-color: var(--light-color);
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 56px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards.cards1 ul {
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards1 ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 64px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards.cards1 .cards-card-body {
+  box-sizing: border-box;
+}
+
+/* Left column: vertical stack */
+.cards.cards1 .cards-card-body:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 240px;
+  flex: 0 0 220px;
+  padding: 4px 20px 4px 36px;
+  gap: 22px;
+}
+
+/* Paragraphs in left column */
+.cards.cards1 .cards-card-body:first-child p {
+  color: #222;
+  font-size: 1.16rem;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+/* Emphasized label (e.g. Quick Links) */
+
+/* Quick Links/buttons - grouped tightly */
+.cards.cards1 .cards-card-body:first-child .button-container,
+.cards.cards1 .cards-card-body:first-child ul,
+.cards.cards1 .cards-card-body:first-child ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Buttons: NVIDIA green, pill shape, overrides default blue */
+.cards.cards1 .cards-card-body a.button,
+.cards.cards1 .cards-card-body button.button {
+  background-color: #76B900;
+  color: #fff;
+  border-radius: 2em;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.52em 1.25em;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+  line-height: 1.3;
+  transition: background 0.18s, color 0.18s;
+}
+
+.cards.cards1 .cards-card-body a.button:hover,
+.cards.cards1 .cards-card-body a.button:focus,
+.cards.cards1 .cards-card-body button.button:hover,
+.cards.cards1 .cards-card-body button.button:focus {
+  background-color: #5da100;
+  color: #fff;
+}
+
+/* Right column: horizontal flex row of cards */
+.cards.cards1 .cards-card-body:last-child {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 0;
+}
+
+/* Card styles */
+.cards.cards1 .cards-card-body:last-child .cards-card,
+.cards.cards1 .cards-card-body:last-child .cards-card-body-card {
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 10%);
+  padding: 48px 28px;
+  min-width: 270px;
+  max-width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Card image */
+.cards.cards1 .cards-card-body:last-child img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card category/label */
+.cards.cards1 .cards-card-body:last-child .category,
+.cards.cards1 .cards-card-body:last-child .card-category {
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Card title */
+.cards.cards1 .cards-card-body:last-child .card-title,
+.cards.cards1 .cards-card-body:last-child h3 {
+  color: #222;
+  font-weight: 700;
+  font-size: 1.22rem;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+/* Card description */
+.cards.cards1 .cards-card-body:last-child .card-desc,
+.cards.cards1 .cards-card-body:last-child p {
+  color: #505050;
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Responsive: stack columns on small screens */
+@media (width <= 900px) {
+  .cards.cards1 {
+    padding: 24px 8px;
+    border-radius: 12px;
+    max-width: 100vw;
+  }
+
+  .cards.cards1 ul li {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cards.cards1 .cards-card-body:first-child {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 16px;
+  }
+
+  .cards.cards1 .cards-card-body:last-child {
+    flex-direction: column;
+    gap: 28px;
+    min-width: 0;
+  }
+
+  .cards.cards1 .cards-card-body:last-child .cards-card,
+  .cards.cards1 .cards-card-body:last-child .cards-card-body-card {
+    min-width: 0;
+    max-width: 100%;
+    padding: 22px 8px;
+    border-radius: 15px;
+  }
+}
+
+/* For extra large screens, add more padding */
+@media (width >= 1200px) {
+  .cards.cards1 {
+    padding: 72px 64px;
   }
 }
