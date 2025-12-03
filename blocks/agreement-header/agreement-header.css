@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-padding-top: 50px;
+
   /* Prevent iOS Safari scroll bounce that can break sticky */
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -15,7 +16,6 @@ body {
 
 /* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
 main .section.agreement-header-container {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -108,7 +108,6 @@ main .section .agreement-header-wrapper {
   width: auto;
   max-width: 100%;
   box-sizing: border-box;
-
   padding: 16px 0;
   z-index: 2000;
 }
@@ -143,7 +142,6 @@ main .section .agreement-header-wrapper {
   text-decoration: none;
   display: flex;
   align-items: center;
-  border-radius: 4px;
   transition: background-color 0.25s ease-out;
   border-radius: 0;
   margin: 0;
@@ -159,8 +157,7 @@ main .section .agreement-header-wrapper {
 /* ============================================================
    TABLET ≥ 768px
 ============================================================ */
-@media (min-width: 768px) {
-
+@media (width >= 768px) {
   body {
     scroll-padding-top: 60px;
   }
@@ -201,8 +198,7 @@ main .section .agreement-header-wrapper {
 /* ============================================================
    DESKTOP ≥ 1024px
 ============================================================ */
-@media (min-width: 1024px) {
-
+@media (width >= 1024px) {
   body {
     scroll-padding-top: 70px;
   }

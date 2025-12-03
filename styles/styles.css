@@ -11,6 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
+/* sections */
+main>.section {
+  margin: 40px 0;
+}
+
 /* Franklin adds margin/padding to the first section, which breaks mobile sticky.
    This forces the sticky header to start exactly at scroll position 0. */
 main > .section:first-of-type {
@@ -283,19 +288,10 @@ main img {
   width: 100%;
 }
 
-/* sections */
-main>.section {
-  margin: 40px 0;
-}
-
 main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
-}
-
-main>.section:first-of-type {
-  margin-top: 0;
 }
 
 .section.align-center .default-content-wrapper {
@@ -305,7 +301,7 @@ main>.section:first-of-type {
 }
 
 .bg-color-light {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .section.p-y-60 {
@@ -313,9 +309,9 @@ padding-block: 60px;
 margin: 0;
 }
 
-.section.p-y-75{
-padding-block: 75px;
-margin: 0;
+.section.p-y-75 {
+  padding-block: 75px;
+  margin: 0;
 }
 
 .align-center-heading h1,
@@ -433,13 +429,46 @@ ol>li {
   line-height: 1.6;
 }
 
-ol>li:before {
+ol>li::before {
   content: counter(section) ". ";
   position: absolute;
   left: 0;
   width: 2.5em;
   font-weight: normal;
   color: inherit;
+}
+
+/* ---------- UNORDERED LISTS (BULLETS) ---------- */
+ul {
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 10px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Nested unordered lists */
+ul ul {
+  margin-top: 0.5em;
+  padding-left: 18px;
+}
+
+ul ul li::before {
+  content: "›";
+  color: #76b900;
 }
 
 /* Level 2 */
@@ -455,7 +484,7 @@ ol>li>ol>li {
   counter-increment: subsection;
 }
 
-ol>li>ol>li:before {
+ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) " ";
   position: absolute;
   left: 0;
@@ -476,44 +505,11 @@ ol>li>ol>li>ol>li {
   margin-bottom: 0.5em;
 }
 
-ol>li>ol>li>ol>li:before {
+ol>li>ol>li>ol>li::before {
   content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
   position: absolute;
   left: 0;
   width: 4.2em;
-}
-
-/* ---------- UNORDERED LISTS (BULLETS) ---------- */
-ul {
-  list-style: none;
-  margin: 1em 0;
-  padding-left: 10px;
-}
-
-ul li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-}
-
-ul li:before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-/* Nested unordered lists */
-ul ul {
-  margin-top: 0.5em;
-  padding-left: 18px;
-}
-
-ul ul li:before {
-  content: "›";
-  color: #76b900;
 }
 
 /* ---------------- AGREEMENT CONTEXT LINKS ---------------- */
@@ -535,8 +531,4 @@ ul ul li:before {
 main .section.general-container > div {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.section.p-y-75 {
-  padding-block: 45px;
 }
