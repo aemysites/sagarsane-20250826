@@ -132,6 +132,7 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
@@ -143,6 +144,18 @@ export default async function decorate(block) {
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
+    });
+  }
+
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTool) => {
+      if (navTool.querySelector('.icon-globe') || navTool.textContent.includes('US')) {
+        navTool.classList.add('language-selector');
+      }
+      if (navTool.querySelector('.icon-user') || navTool.textContent.includes('Sign In')) {
+        navTool.classList.add('sign-in');
+      }
     });
   }
 
