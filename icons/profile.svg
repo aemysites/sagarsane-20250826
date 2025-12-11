@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <!-- Outer circle -->
+    <circle cx="100" cy="100" r="75" fill="none" stroke="#5a5f66" stroke-width="8"/>
+    
+    <!-- Head circle -->
+    <circle cx="100" cy="75" r="20" fill="none" stroke="#5a5f66" stroke-width="8"/>
+    
+    <!-- Shoulders/body -->
+    <path d="M 60 145 Q 60 115 80 110 L 120 110 Q 140 115 140 145" 
+          fill="none" stroke="#5a5f66" stroke-width="8" stroke-linecap="round"/>
+  </svg>
