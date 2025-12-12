@@ -203,6 +203,7 @@ header nav .nav-drop:not(.simple-dropdown) .dropdown-menu-label::after  {
   transform: rotate(45deg);
   position: absolute;
   right: 1rem;
+  transition: transform 0.25s ease;
 }
 
 header nav .menu-item-label[aria-expanded="true"] .mega-menu-label-text::after,
@@ -248,11 +249,17 @@ header nav .chevron {
   font-size: 0.95em;
   display: inline-block;
   transition: transform 0.3s ease, color 0.3s ease;
-  padding-left: 12px;
+  padding-left: 10px;
 }
 
 header nav .chevron::before {
     content: '\f105';
+}
+
+header nav .nav-sections .label-text:hover + .chevron,
+header nav .nav-sections .expanded-menu .expanded-heading:hover + .chevron {
+  transform: translateX(3px);
+  color: #000;
 }
 
 header nav .nav-sections .expanded-menu .expanded-description {
@@ -523,7 +530,7 @@ header nav .simple-dropdown .chevron {
   header nav .nav-drop.simple-dropdown .expanded-menu-title {
     grid-column: 1 / 5;
     display: block;
-    width: 1400px;
+    width: 1200px;
     margin: auto;
   }
 
@@ -531,6 +538,10 @@ header nav .simple-dropdown .chevron {
     color: #666;
     font-size: 1rem;
     padding: 0;
+  }
+
+  header nav .menu-item-label[aria-expanded="true"] .mega-menu-label-text {
+    border-bottom: 3px solid #76b900;
   }
 
   header nav .nav-drop:not(.simple-dropdown) .dropdown-menu-label::after,
@@ -575,8 +586,8 @@ header nav .simple-dropdown .chevron {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: min-content;
-    max-height: 250px;
-    max-width: 1400px;
+    max-height: 300px;
+    max-width: 1200px;
     margin: auto;
   }
 
@@ -585,7 +596,7 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav .simple-dropdown .chevron {
-    padding-left: 12px;
+    padding-left: 10px;
   }
 
   body:has(header nav[aria-expanded='true'])::after {
