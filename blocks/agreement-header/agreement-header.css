@@ -17,7 +17,7 @@ body {
 /* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
 main .section.agreement-header-container {
   position: sticky;
-  top: 45px;
+  top: var(--nav-height);
   z-index: 90;
   background: #000;
   width: 100%;
@@ -82,6 +82,11 @@ main .section .agreement-header-wrapper {
   align-items: center;
   gap: 8px;
   padding: 0;
+}
+
+.agreement-mobile-toggle:hover,
+.agreement-mobile-toggle:focus {
+  background-color: transparent;
 }
 
 /* Arrow animation */
