@@ -194,7 +194,7 @@ header nav .mega-menu-label-text {
   font-size: 1rem;
   padding: 15px;
   display: block;
-  
+  border-left: 3px solid transparent;
 }
 
 header nav .mega-menu-label-text::after,
@@ -305,9 +305,8 @@ header nav .nav-sections .dropdown-menu-label.is-active .label-text {
 }
 
 header nav .nav-sections .menu-item-label[aria-expanded='true']:has(.dropdown-menu-label.is-active)  .mega-menu-label-text {
-  border-left: none;
+  border-left: 3px solid transparent;
 }
-
 
 header nav .nav-sections .nav-drop {
   display: none;
@@ -472,7 +471,7 @@ header nav .simple-dropdown .chevron {
     position: fixed;
     left: 0;
     width: 100%;
-    top: 46px;
+    top: 49px;
     background-color: var(--light-color) !important;
     white-space: initial;
     gap: 0;
@@ -543,6 +542,8 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav .mega-menu-label-text {
+    border-bottom: 3px solid transparent;
+    border-left: none !important;
     color: #666;
     font-size: 1rem;
     padding: 0;
