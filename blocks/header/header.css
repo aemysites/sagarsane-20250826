@@ -11,9 +11,14 @@ header a:hover {
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   position: fixed;
   border-bottom: 1px solid #e5e5e5;
+  transition: transform 0.3s ease-in-out;
+}
+
+header .nav-wrapper.nav-hidden {
+  transform: translateY(-100%);
 }
 
 header nav {
