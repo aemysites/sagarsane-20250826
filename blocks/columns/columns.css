@@ -1,4 +1,4 @@
-.columns > div {
+.columns>div {
   display: flex;
   flex-direction: column;
 }
@@ -7,26 +7,25 @@
   width: 100%;
 }
 
-.columns > div > div {
+.columns>div>div {
   order: 1;
 }
 
-.columns > div > .columns-img-col {
+.columns>div>.columns-img-col {
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+.columns>div>.columns-img-col img {
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
+@media (width >=900px) {
+  .columns>div {
     flex-direction: unset;
     gap: 24px;
   }
 
-  .columns > div > div {
+  .columns>div>div {
     flex: 1;
     order: unset;
   }
@@ -79,9 +78,9 @@
 }
 
 /* Right column: vertical stack, vertically centered with logo */
-.columns.columns20 .columns-2-cols .columns-img-col ~ div,
-.columns.columns20 .testcolumns .columns-img-col ~ div,
-.columns.columns20 .block .columns-img-col ~ div {
+.columns.columns20 .columns-2-cols .columns-img-col~div,
+.columns.columns20 .testcolumns .columns-img-col~div,
+.columns.columns20 .block .columns-img-col~div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +114,7 @@
 }
 
 /* Responsive stacking on mobile screens */
-@media (width <= 800px) {
+@media (width <=800px) {
   .columns.columns20 {
     padding: 20px 8px;
   }

@@ -1,24 +1,319 @@
 footer {
-  font-size: var(--body-font-size-xs);
-  background: rgb(255 255 255) none repeat scroll 0% 0% / auto padding-box border-box;
+  color: #fff;
+  font-family: var(--body-font-family);
 }
 
-footer .footer>div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+.footer .page-footer-wrapper {
+  max-width: 1290px;
+  margin: 0 auto;
 }
 
-footer .footer p {
+.footer .section.page-footer-links {
+  background-color: #000 !important;
+  padding: 60px 30px;
+  padding-bottom: 0px;
   margin: 0;
 }
 
-footer img {
-  max-width: 100%;
+.footer .section.page-footer-subscribe {
+  background-color: #000 !important;
+  padding: 60px 30px;
+  margin: 0;
 }
 
-@media (width>=900px) {
-  footer .footer>div {
-    padding: 40px 32px 24px;
+.footer .columns>div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer .columns>div>div {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer h1 {
+  border-bottom: 1px solid #747474;
+  color: #eee;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-bottom: 9pt;
+  text-align: left;
+  text-transform: none;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer li {
+  margin-bottom: 5px;
+}
+
+.footer ul li {
+  padding-left: 0;
+}
+
+.footer ul li::before {
+  content: "";
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Specific rule for footer links to ensure correct styling */
+.footer.block .page-footer-links ul li a {
+  color: #76b900;
+  font-size: 1pc;
+  /* 16px */
+  line-height: 30px;
+  text-decoration: none;
+}
+
+/* Subscribe and Social Sections */
+.section.page-footer-subscribe {
+  padding: 30px 15px;
+}
+
+.section.page-footer-subscribe .columns>div>div {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-right: 30px;
+}
+
+
+
+.section.page-footer-subscribe .columns-wrapper:nth-of-type(2)>div>div p:first-child {
+  color: #999;
+  font-size: 1pc;
+  padding-top: 2px;
+  vertical-align: top;
+}
+
+.section.page-footer-subscribe .columns-wrapper:nth-of-type(2)>div>div p:nth-of-type(2) {
+  display: flex;
+  gap: 10px;
+}
+
+.section.page-footer-subscribe p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section.page-footer-subscribe .icon-envelope {
+  width: 48px;
+  height: 36px;
+}
+
+.section.page-footer-subscribe .icon-envelope img {
+  /* Removed filter: invert(1) to restore original color */
+}
+
+.section.page-footer-subscribe .button-container {
+  margin: 0;
+  padding: 0px;
+}
+
+.section.page-footer-subscribe a.button {
+  background-color: #76b900;
+  color: #000;
+  font-weight: 700;
+  padding: 13px 15px;
+  border-radius: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.section.page-footer-subscribe a.button:hover {
+  background-color: #91c733;
+}
+
+/* Global Footer */
+.section.global-footer-container {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.section.global-footer-container .default-content-wrapper {
+  max-width: 1290px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.section.global-footer-container p {
+  margin: 0;
+  color: #666;
+}
+
+.section.global-footer-container a {
+  color: #666;
+  text-decoration: none;
+}
+
+.section.global-footer-container a:hover {
+  color: #1a1a1a;
+}
+
+/* Corrected logo class and styles */
+.section.global-footer-container .icon-nvidia-logo {
+  display: block;
+  float: left;
+  height: 20px;
+  width: 110px;
+  margin: 0 auto 15px;
+}
+
+.section.global-footer-container p:nth-of-type(2) {
+  clear: both;
+}
+
+.section.global-footer-container p:nth-of-type(2) a {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 10px;
+  position: relative;
+  font-size: 1pc;
+  line-height: 24px;
+}
+
+.section.global-footer-container p:nth-of-type(2) a:not(:last-child)::after {
+  content: '';
+  background: #666;
+  height: 14px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.section.global-footer-container p:last-of-type {
+  clear: both;
+  font-size: 9pt;
+  line-height: 1pc;
+  margin-top: 10px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 1023px) {
+  .footer .columns>div {
+    flex-direction: column;
+  }
+
+  .footer h1 {
+    text-align: center;
+  }
+
+  .footer ul {
+    text-align: center;
+  }
+
+  .section.page-footer-subscribe .columns>div {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section.page-footer-subscribe .columns-wrapper:nth-of-type(2) .columns>div>div {
+    justify-content: end;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .footer .section.page-footer-links .columns>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 639px) {
+
+  .section.global-footer-container .default-content-wrapper,
+  .section.global-footer-container p:nth-of-type(2) {
+    text-align: center;
+  }
+
+  /* Target the div containing the icon+text and button */
+  .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols>div>div:first-child {
+    display: flex;
+    /* Make it a flex container */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Space between icon+text and button */
+  }
+
+  /* Ensure the p with icon+text is also a flex container to align its children */
+  .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols>div>div:first-child p:first-child {
+    display: flex;
+    flex-direction: column;
+    /* Stack icon and text vertically */
+    align-items: center;
+    /* Center icon and text horizontally */
+    gap: 5px;
+    /* Space between icon and text */
+    margin: 0;
+    /* Remove default paragraph margin */
+  }
+
+  /* Reset position/float for icon */
+  .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols .icon-envelope {
+    position: static;
+    /* Remove relative positioning */
+    top: auto;
+    float: none;
+    margin-bottom: 5px;
+    /* Add some space below the icon */
+  }
+
+  /* Reset margin for subscribe text */
+  .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols p:first-child span {
+    margin-left: 0;
+  }
+
+  /* Center the button */
+  .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols .button-container {
+    margin-left: 0;
+  }
+
+  /*Center the nvidia-logo in global footer*/
+  .footer .section.global-footer-container .icon-nvidia-logo {
+    float: none;
+  }
+
+  /* Make UL horizontal */
+  .footer .columns.block.columns-3-cols ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* allow items to wrap on small screens */
+    gap: 10px 20px;
+    /* spacing between items */
+    justify-content: flex-start;
+    /* LEFT align the items */
+    text-align: left;
+  }
+
+  .footer .columns.block.columns-3-cols h1 {
+    font-size: 1pc;
+  }
+
+  /* Remove vertical spacing */
+  .footer .columns.block.columns-3-cols li {
+    margin-bottom: 0;
   }
 }
