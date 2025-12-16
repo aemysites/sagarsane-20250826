@@ -81,8 +81,8 @@ footer {
 
 .section.page-footer-subscribe .columns>div>div {
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   padding-right: 30px;

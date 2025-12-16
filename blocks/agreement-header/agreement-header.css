@@ -17,7 +17,7 @@ body {
 /* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
 main .section.agreement-header-container {
   position: sticky;
-  top: 45px;
+  top: 67px;
   z-index: 90;
   background: #000;
   width: 100%;
@@ -212,6 +212,7 @@ main .section .agreement-header-wrapper {
   main .section.agreement-header-container {
     height: 100%;
     max-height: 70px;
+    top: 45px;
   }
 
   .agreement-header-wrapper {
