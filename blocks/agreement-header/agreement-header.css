@@ -9,7 +9,7 @@ body {
 
   /* Prevent iOS Safari scroll bounce that can break sticky */
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
+  /* REMOVED: overflow-x: hidden — this breaks position: sticky on mobile */
 }
 
 
@@ -26,6 +26,11 @@ main .section.agreement-header-container {
   max-height: 45px;
 
   /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
+  position: -webkit-sticky;
+  /* Safari compatibility */
+  position: sticky;
+  will-change: transform;
+  /* Performance optimization for mobile */
 
   display: flex;
   align-items: center;
