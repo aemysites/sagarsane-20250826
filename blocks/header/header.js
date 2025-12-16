@@ -2,6 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 const isDesktop = window.matchMedia('(min-width: 1023px)');
+const isTablet = window.matchMedia('(min-width: 640px) and (max-width: 1022px)');
 
 /* eslint-disable no-use-before-define */
 function closeOnEscape(e) {
@@ -19,9 +20,6 @@ function closeOnEscape(e) {
   }
 }
 
-function closeOnFocusLost(/* e */) {
-  // intentionally left commented for potential future use
-}
 
 function openOnKeydown(e) {
   const focused = document.activeElement;
@@ -82,10 +80,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   // escape/focusout handlers
   if (!expanded || isDesktop.matches) {
     window.addEventListener('keydown', closeOnEscape);
-    nav.addEventListener('focusout', closeOnFocusLost);
   } else {
     window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
   }
 }
 
@@ -110,7 +106,31 @@ function outsideClickListener(e) {
   }
 }
 
+function tabletCloseNavOnOutsideClick(e) {
+  if (!isTablet.matches) return;
+
+  const nav = document.getElementById('nav');
+  const navSections = nav.querySelector('.nav-sections');
+  const hamburger = nav.querySelector('.nav-hamburger');
+
+  // Ignore clicks inside nav-sections
+  if (navSections.contains(e.target)) return;
+
+  // Ignore clicks on the hamburger or its children
+  if (hamburger.contains(e.target)) return;
+
+  // Only close if currently open
+  const expanded = nav.getAttribute('aria-expanded') === 'true';
+  if (!expanded) return;
+
+  // Close entire navigation
+  toggleMenu(nav, navSections);
+}
+
+
 export default async function decorate(block) {
+  const originalHTML = block.innerHTML;
+
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
@@ -312,13 +332,16 @@ export default async function decorate(block) {
     navSections.appendChild(sectionsToolsWrapper);
   }
 
-  // attach/remove outside click listener based on desktop state
+  // attach/remove outside click listener based on screen size
   if (isDesktop.matches) {
     document.addEventListener('click', outsideClickListener);
+  } else if (isTablet.matches) {
+    document.addEventListener('click', tabletCloseNavOnOutsideClick);
   } else {
     document.removeEventListener('click', outsideClickListener);
+    document.removeEventListener('click', tabletCloseNavOnOutsideClick);
   }
-
+  
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
@@ -387,5 +410,10 @@ export default async function decorate(block) {
       window.requestAnimationFrame(handleScroll);
       ticking = true;
     }
+  });
+
+  isDesktop.addEventListener('change', () => {
+    block.innerHTML = originalHTML;
+    decorate(block);
   });
 }

@@ -48,7 +48,7 @@ main > .section:first-of-type {
   --heading-font-size-m: 15px;
   --heading-font-size-s: 15px;
   --heading-font-size-xs: 15px;
-  --nav-height: 46px;
+  --nav-height: 67px;
   --header-height: var(--nav-height);
 }
 
@@ -76,7 +76,7 @@ main > .section:first-of-type {
     --heading-font-size-m: 15px;
     --heading-font-size-s: 15px;
     --heading-font-size-xs: 15px;
-    --nav-height: 46px;
+    --nav-height: 67px;
   }
 }
 
