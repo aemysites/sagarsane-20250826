@@ -67,7 +67,8 @@ export default async function decorate(block) {
   // find parent section (may or may not already have data-section-id/class)
   const section = block.closest('.section');
 
-  // If section isn't ready yet, use a MutationObserver to wait for its data-section-id or class attr,
+  // If section isn't ready yet, use a MutationObserver 
+  // to wait for its data-section-id or class attr,
   // then apply once and disconnect. But try immediate application first.
   if (section) {
     const applied = ensureSectionIdClass(section);

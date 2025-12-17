@@ -20,7 +20,6 @@ function closeOnEscape(e) {
   }
 }
 
-
 function openOnKeydown(e) {
   const focused = document.activeElement;
   if (focused.className !== 'nav-drop') return;
@@ -126,7 +125,6 @@ function tabletCloseNavOnOutsideClick(e) {
   // Close entire navigation
   toggleMenu(nav, navSections);
 }
-
 
 export default async function decorate(block) {
   const originalHTML = block.innerHTML;
@@ -341,7 +339,6 @@ export default async function decorate(block) {
     document.removeEventListener('click', outsideClickListener);
     document.removeEventListener('click', tabletCloseNavOnOutsideClick);
   }
-  
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
