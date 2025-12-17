@@ -18,7 +18,7 @@ main>.section {
 
 /* Franklin adds margin/padding to the first section, which breaks mobile sticky.
    This forces the sticky header to start exactly at scroll position 0. */
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -99,15 +99,22 @@ header {
   height: var(--nav-height);
 }
 
-header .header, footer .footer {
+header .header,
+footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status="loaded"], footer .footer[data-block-status="loaded"] {
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
@@ -141,12 +148,18 @@ h6 {
   font-size: var(--heading-font-size-xs);
 }
 
-p, dl, ol, ul, pre, blockquote {
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
 }
 
-code, pre {
+code,
+pre {
   font-size: var(--body-font-size-s);
 }
 
@@ -162,7 +175,10 @@ main>div {
   margin: 40px 16px;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font: inherit;
 }
 
@@ -179,7 +195,8 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link, button {
+a.button:any-link,
+button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
@@ -201,17 +218,22 @@ a.button:any-link, button {
   white-space: nowrap;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus {
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
-button:disabled, button:disabled:hover {
+button:disabled,
+button:disabled:hover {
   background-color: var(--light-color);
   cursor: unset;
 }
 
-a.button.secondary, button.secondary {
+a.button.secondary,
+button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color);
@@ -241,7 +263,7 @@ main>.section>div {
 }
 
 .section.align-center .default-content-wrapper {
-  text-align: center ;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -251,8 +273,8 @@ main>.section>div {
 }
 
 .section.p-y-60 {
-padding-block: 60px;
-margin: 0;
+  padding-block: 60px;
+  margin: 0;
 }
 
 .section.p-y-75 {
@@ -269,6 +291,15 @@ margin: 0;
   text-align: center;
 }
 
+.align-left-heading h1,
+.align-left-heading h2,
+.align-left-heading h3,
+.align-left-heading h4,
+.align-left-heading h5,
+.align-left-heading h6 {
+  text-align: left;
+}
+
 /* Paragraphs */
 .default-content-wrapper p {
   margin: 10px 0;
@@ -276,16 +307,16 @@ margin: 0;
 }
 
 /* List */
-ol li{
+ol li {
   padding: 10px 0;
   line-height: 24.99px;
 }
 
-.h1-large h1{
+.h1-large h1 {
   font-size: 28px;
 }
 
-.h2-small h2{
+.h2-small h2 {
   font-size: 18px;
 }
 
@@ -312,7 +343,8 @@ ol li{
 }
 
 /* section metadata */
-main .section.light, main .section.highlight {
+main .section.light,
+main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
@@ -485,7 +517,7 @@ ol>li>ol>li>ol>li::before {
   text-decoration-color: #000;
 }
 
-main .section.general-container > div {
+main .section.general-container>div {
   padding-left: 15px;
   padding-right: 15px;
 }
