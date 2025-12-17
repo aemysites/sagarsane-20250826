@@ -1,49 +1,55 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // HEADER ROW
-  const headerRow = ['Columns (columns20)'];
-
-  // Find the two columns: image and text content
-  // Column 1: image
-  const imageCol = element.querySelector('.nv-image img');
-  // Column 2: text (heading + description)
-  let textCol = null;
-  const titleBlock = element.querySelector('.nv-title h2');
-  const descBlock = element.querySelector('.nv-text .description');
-
-  // Compose a container for the text column
-  if (titleBlock || descBlock) {
-    textCol = document.createElement('div');
-    if (titleBlock) textCol.appendChild(titleBlock);
-    if (descBlock) textCol.appendChild(descBlock);
+  // Find image (left column)
+  const imageDiv = element.querySelector('.nv-image');
+  let imageEl = null;
+  if (imageDiv) {
+    imageEl = imageDiv.querySelector('img');
   }
 
-  // Defensive: if not found, fallback to first h2 and first description
-  if (!textCol) {
-    const h2 = element.querySelector('h2');
-    const desc = element.querySelector('.description');
-    if (h2 || desc) {
-      textCol = document.createElement('div');
-      if (h2) textCol.appendChild(h2);
-      if (desc) textCol.appendChild(desc);
+  // Find the right column container (contains heading and description)
+  let textContainer = null;
+  const containers = element.querySelectorAll('.nv-container');
+  if (containers.length > 1) {
+    textContainer = containers[1]; // The second .nv-container is the right column
+  }
+
+  // Extract all text content from the right column (including heading and description)
+  let rightCell = '';
+  if (textContainer) {
+    // Get all heading and paragraph elements in the right column
+    const headings = textContainer.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const paragraphs = textContainer.querySelectorAll('p');
+    const cellContent = document.createElement('div');
+    headings.forEach(h => {
+      cellContent.appendChild(h.cloneNode(true));
+    });
+    paragraphs.forEach(p => {
+      cellContent.appendChild(p.cloneNode(true));
+    });
+    // If we got any content, use it
+    if (cellContent.childNodes.length > 0) {
+      rightCell = cellContent;
+    }
+    // Fallback: If still empty, get all text nodes in right column
+    if (!rightCell) {
+      const fallbackContent = document.createElement('div');
+      Array.from(textContainer.querySelectorAll('*')).forEach(el => {
+        if (el.textContent.trim().length > 0) {
+          fallbackContent.appendChild(el.cloneNode(true));
+        }
+      });
+      if (fallbackContent.childNodes.length > 0) {
+        rightCell = fallbackContent;
+      }
     }
   }
 
-  // Defensive: if still not found, fallback to all text
-  if (!textCol) {
-    textCol = document.createElement('div');
-    Array.from(element.querySelectorAll('h2, p')).forEach(el => textCol.appendChild(el));
-  }
+  // Build the Columns block table
+  const headerRow = ['Columns (columns20)'];
+  const contentRow = [imageEl ? imageEl.cloneNode(true) : '', rightCell || ''];
+  const table = WebImporter.DOMUtils.createTable([headerRow, contentRow], document);
 
-  // Build the columns row
-  const columnsRow = [imageCol, textCol];
-
-  // Build the table
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    columnsRow
-  ], document);
-
-  // Replace the original element with the new table
+  // Replace the original element
   element.replaceWith(table);
 }
