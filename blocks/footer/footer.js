@@ -67,7 +67,7 @@ export default async function decorate(block) {
   // find parent section (may or may not already have data-section-id/class)
   const section = block.closest('.section');
 
-  // If section isn't ready yet, use a MutationObserver 
+  // If section isn't ready yet, use a MutationObserver
   // to wait for its data-section-id or class attr,
   // then apply once and disconnect. But try immediate application first.
   if (section) {
@@ -75,14 +75,13 @@ export default async function decorate(block) {
     if (!applied) {
       // watch for the data-section-id being added or changed (short-lived observer)
       const obs = new MutationObserver((mutations, observer) => {
-        for (const m of mutations) {
+        mutations.forEach((m) => {
           if (m.type === 'attributes' && (m.attributeName === 'data-section-id' || m.attributeName === 'class')) {
             if (ensureSectionIdClass(section)) {
               observer.disconnect();
-              return;
             }
           }
-        }
+        });
       });
       obs.observe(section, { attributes: true, attributeFilter: ['data-section-id', 'class'] });
 
