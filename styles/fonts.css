@@ -1,8 +1,10 @@
 /* stylelint-disable max-line-length */
+
 /* Load Font Awesome (self-hosted) via styles/fontawesome.css so it is lazy loaded
   by the existing loadFonts() loader. If you prefer CDN, replace with the
   CDN URL (e.g. https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css) */
   @import url('/styles/fontawesome.css');
+
   @font-face {
     font-family: 'NVIDIA Sans';
     font-style: normal;

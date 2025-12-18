@@ -1,6 +1,6 @@
 /* header and nav layout */
-header nav ul li::before, 
-header nav ul ul li::before{
+header nav ul li::before,
+header nav ul ul li::before {
   content: '';
 }
 
@@ -11,9 +11,14 @@ header a:hover {
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   position: fixed;
   border-bottom: 1px solid #e5e5e5;
+  transition: transform 0.3s ease-in-out;
+}
+
+header .nav-wrapper.nav-hidden {
+  transform: translateY(-100%);
 }
 
 header nav {
@@ -21,7 +26,8 @@ header nav {
   display: grid;
   grid-template:
     'hamburger search brand tools'
-    'sections sections sections sections' 1fr / auto auto 1fr auto;;
+    'sections sections sections sections' 1fr / auto auto 1fr auto;
+  ;
   align-items: center;
   gap: 0 10px;
   font-family: var(--body-font-family);
@@ -189,11 +195,11 @@ header nav .mega-menu-label-text {
   font-size: 1rem;
   padding: 15px;
   display: block;
-  
+  border-left: 3px solid transparent;
 }
 
 header nav .mega-menu-label-text::after,
-header nav .nav-drop:not(.simple-dropdown) .dropdown-menu-label::after  {
+header nav .nav-drop:not(.simple-dropdown) .dropdown-menu-label::after {
   content: '';
   border: solid #5e5e5e;
   border-width: 0 2px 2px 0;
@@ -224,13 +230,13 @@ header nav .nav-sections .sections-tools-wrapper .menu-item-label {
   font-size: 16px;
 }
 
-header nav .nav-sections ul > li > ul {
+header nav .nav-sections ul>li>ul {
   margin-top: 0;
 }
 
 header nav .nav-sections .expanded-menu {
   display: none;
-  padding: 0 30px; 
+  padding: 0 30px;
 }
 
 header nav .nav-sections .expanded-menu[aria-expanded='true'] {
@@ -239,7 +245,7 @@ header nav .nav-sections .expanded-menu[aria-expanded='true'] {
 
 header nav .nav-sections .expanded-menu .expanded-heading {
   font-weight: 700;
-} 
+}
 
 header nav .chevron {
   color: #76b900;
@@ -253,11 +259,11 @@ header nav .chevron {
 }
 
 header nav .chevron::before {
-    content: '\f105';
+  content: '\f105';
 }
 
-header nav .nav-sections .label-text:hover + .chevron,
-header nav .nav-sections .expanded-menu .expanded-heading:hover + .chevron {
+header nav .nav-sections .label-text:hover+.chevron,
+header nav .nav-sections .expanded-menu .expanded-heading:hover+.chevron {
   transform: translateX(3px);
   color: #000;
 }
@@ -299,10 +305,9 @@ header nav .nav-sections .dropdown-menu-label.is-active .label-text {
   display: block;
 }
 
-header nav .nav-sections .menu-item-label[aria-expanded='true']:has(.dropdown-menu-label.is-active)  .mega-menu-label-text {
-  border-left: none;
+header nav .nav-sections .menu-item-label[aria-expanded='true']:has(.dropdown-menu-label.is-active) .mega-menu-label-text {
+  border-left: 3px solid transparent;
 }
-
 
 header nav .nav-sections .nav-drop {
   display: none;
@@ -311,25 +316,26 @@ header nav .nav-sections .nav-drop {
 
 header nav .nav-sections .menu-item-label[aria-expanded='true'] .nav-drop {
   display: block;
-  background-color: #eee;;
+  background-color: #eee;
+  ;
   margin: 0;
-} 
+}
 
 header nav .nav-drop.simple-dropdown .expanded-menu-title {
   display: none;
 }
 
-header nav .nav-tools > .default-content-wrapper > ul{
+header nav .nav-tools>.default-content-wrapper>ul {
   display: flex;
   gap: 5px;
   padding-right: 10px;
 }
 
-header nav .nav-tools > .default-content-wrapper > ul > li  {
+header nav .nav-tools>.default-content-wrapper>ul>li {
   padding: 0;
 }
 
-header nav .nav-tools > .default-content-wrapper > ul > li:has(span) {
+header nav .nav-tools>.default-content-wrapper>ul>li:has(span) {
   display: flex;
   align-items: center;
 }
@@ -345,7 +351,7 @@ header nav .simple-dropdown .chevron {
   padding-left: 0;
 }
 
-@media (width >= 640px) {
+@media (width >=640px) {
   header nav .nav-sections {
     width: 375px;
   }
@@ -360,8 +366,8 @@ header nav .simple-dropdown .chevron {
 
   body:has(header nav[aria-expanded='true'])::after {
     content: "";
-    position: fixed;
-    top: 0; 
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -371,13 +377,13 @@ header nav .simple-dropdown .chevron {
 }
 
 
-@media (width >= 1023px) {
+@media (width >=1023px) {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px; 
+    gap: 0 32px;
     padding: 0 60px;
-  
+
   }
 
   header nav[aria-expanded='true'] {
@@ -421,12 +427,12 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav ul,
-  header nav ul li{
+  header nav ul li {
     margin: 0;
     padding: 0;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
+  header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
   }
@@ -467,14 +473,14 @@ header nav .simple-dropdown .chevron {
     position: fixed;
     left: 0;
     width: 100%;
-    top: 46px;
+    top: 49px;
     background-color: var(--light-color) !important;
     white-space: initial;
     gap: 0;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     min-width: 100%;
     max-height: 600px;
-    display: flex !important; 
+    display: flex !important;
     pointer-events: none;
     padding: 15px 0 0 15px;
   }
@@ -506,17 +512,17 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav .nav-sections .expanded-menu[aria-expanded='true'] {
-    display: grid; 
+    display: grid;
   }
 
   header nav .nav-sections .expanded-menus-wrapper {
     width: 100%;
   }
-  
+
   header nav .nav-sections .expanded-menu {
     grid-column-start: 2;
     align-items: start;
-    align-content: start; 
+    align-content: start;
     background-color: #eee;
     height: 100%;
     width: 100%;
@@ -538,6 +544,8 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav .mega-menu-label-text {
+    border-bottom: 3px solid transparent;
+    border-left: none !important;
     color: #666;
     font-size: 1rem;
     padding: 0;
@@ -559,7 +567,7 @@ header nav .simple-dropdown .chevron {
   }
 
   header nav .dropdown-menu-label.is-active,
-  header nav .nav-sections .menu-item-label[aria-expanded='true'] .mega-menu-label-text{
+  header nav .nav-sections .menu-item-label[aria-expanded='true'] .mega-menu-label-text {
     border-left: none;
     padding: 0;
   }
@@ -573,12 +581,12 @@ header nav .simple-dropdown .chevron {
     background-color: #ddd;
   }
 
-  header nav .nav-tools > .default-content-wrapper > ul > li {
+  header nav .nav-tools>.default-content-wrapper>ul>li {
     width: max-content;
     color: #666;
   }
 
-  header nav .nav-tools > .default-content-wrapper > ul{
+  header nav .nav-tools>.default-content-wrapper>ul {
     padding: 0;
     align-items: center;
     width: 100%;

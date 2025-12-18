@@ -719,6 +719,11 @@ async function loadSection(section, loadCallback) {
     if (loadCallback) await loadCallback(section);
     section.dataset.sectionStatus = 'loaded';
     section.style.display = null;
+
+    // Add data-section-id as a class name
+    if (section.dataset.sectionId) {
+      section.classList.add(section.dataset.sectionId);
+    }
   }
 }
 
