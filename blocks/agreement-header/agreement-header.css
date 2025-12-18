@@ -9,6 +9,7 @@ body {
 
   /* Prevent iOS Safari scroll bounce that can break sticky */
   -webkit-overflow-scrolling: touch;
+
   /* REMOVED: overflow-x: hidden — this breaks position: sticky on mobile */
 }
 
@@ -16,7 +17,6 @@ body {
 
 /* Sticky full-width black header (POSITION ROOT FOR DROPDOWN) */
 main .section.agreement-header-container {
-  position: sticky;
   top: var(--nav-height);
   z-index: 90;
   background: #000;
@@ -26,10 +26,11 @@ main .section.agreement-header-container {
   max-height: 45px;
 
   /* POSITION RELATIVE HERE → dropdown anchors to full black bar */
-  position: -webkit-sticky;
+
   /* Safari compatibility */
   position: sticky;
   will-change: transform;
+
   /* Performance optimization for mobile */
 
   display: flex;

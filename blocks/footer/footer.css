@@ -11,7 +11,7 @@ footer {
 .footer .section.page-footer-links {
   background-color: #000 !important;
   padding: 60px 30px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   margin: 0;
 }
 
@@ -69,6 +69,7 @@ footer {
 .footer.block .page-footer-links ul li a {
   color: #76b900;
   font-size: 1pc;
+
   /* 16px */
   line-height: 30px;
   text-decoration: none;
@@ -123,7 +124,7 @@ footer {
 
 .section.page-footer-subscribe .button-container {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
 .section.page-footer-subscribe a.button {
@@ -207,7 +208,7 @@ footer {
 
 /* --- MEDIA QUERIES --- */
 
-@media (max-width: 1023px) {
+@media (width <= 1023px) {
   .footer .columns>div {
     flex-direction: column;
   }
@@ -225,13 +226,13 @@ footer {
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .section.page-footer-subscribe .columns-wrapper:nth-of-type(2) .columns>div>div {
     justify-content: end;
   }
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (width >= 640px) and (width <= 1023px) {
   .footer .section.page-footer-links .columns>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -239,8 +240,7 @@ footer {
   }
 }
 
-@media (max-width: 639px) {
-
+@media (width <= 639px) {
   .section.global-footer-container .default-content-wrapper,
   .section.global-footer-container p:nth-of-type(2) {
     text-align: center;
@@ -249,12 +249,16 @@ footer {
   /* Target the div containing the icon+text and button */
   .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols>div>div:first-child {
     display: flex;
+
     /* Make it a flex container */
     flex-direction: column;
+
     /* Stack children vertically */
     align-items: center;
+
     /* Center items horizontally */
     gap: 10px;
+
     /* Space between icon+text and button */
   }
 
@@ -262,22 +266,28 @@ footer {
   .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols>div>div:first-child p:first-child {
     display: flex;
     flex-direction: column;
+
     /* Stack icon and text vertically */
     align-items: center;
+
     /* Center icon and text horizontally */
     gap: 5px;
+
     /* Space between icon and text */
     margin: 0;
+
     /* Remove default paragraph margin */
   }
 
   /* Reset position/float for icon */
   .footer .section.page-footer-subscribe .columns-wrapper .columns.block.columns-1-cols .icon-envelope {
     position: static;
+
     /* Remove relative positioning */
     top: auto;
     float: none;
     margin-bottom: 5px;
+
     /* Add some space below the icon */
   }
 
@@ -291,7 +301,7 @@ footer {
     margin-left: 0;
   }
 
-  /*Center the nvidia-logo in global footer*/
+  /* Center the nvidia-logo in global footer */
   .footer .section.global-footer-container .icon-nvidia-logo {
     float: none;
   }
@@ -300,10 +310,13 @@ footer {
   .footer .columns.block.columns-3-cols ul {
     display: flex;
     flex-wrap: wrap;
+
     /* allow items to wrap on small screens */
     gap: 10px 20px;
+
     /* spacing between items */
     justify-content: flex-start;
+
     /* LEFT align the items */
     text-align: left;
   }
