@@ -272,6 +272,11 @@ main>.section>div {
   background-color: #eee;
 }
 
+.bg-color-black {
+  background-color: #000;
+  color: #eee;
+}
+
 .section.p-y-60 {
   padding-block: 60px;
   margin: 0;
